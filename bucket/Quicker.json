@@ -1,48 +1,47 @@
 {
-    "##": "This package is not ported to the official buckets because ReadMe file written in English is not available. Extracting the .msi using 7-zip (which is by default in Scoop) causes path error. Therefore renaming it to .msi_.",
-    "homepage": "https://getquicker.net/",
-    "description": "Make key shortcuts for programs, folders, URLs, and commands",
     "version": "1.42.24.0",
-    "license": {
-        "identifier": "Shareware",
-        "url": "https://getquicker.net/Forum/ViewTopic/341"
-    },
-    "depends": "uniextract2",
+    "description": "指尖工具箱, Windows 效率工具",
+    "homepage": "https://getquicker.net",
+    "license": "Shareware",
     "architecture": {
-        "32bit": {
-            "url": "https://getquicker.net/download/item/win_x86#/quicker.msi",
-            "hash": "47e11c3b4e327f1b01d264784d6e7a2c08e5e6bfb7f7ea9b781dae6ca7f1ecf7"
-        },
         "64bit": {
-            "url": "https://getquicker.net/download/item/win_x64#/quicker.msi",
-            "hash": "509bb5f82d63d6ad6ba7ca79f5be5bbeb94d92bac718629e219f17faa57a14a4"
+            "url": "https://getquicker.net/download/item/fast_x64#/quiker.msi",
+            "hash": "23e443fb191dc99256d5a8dca08126f3c1bd017bbecfca74968082e535df7003"
+        },
+        "32bit": {
+            "url": "https://getquicker.net/download/item/fast_x86#/quiker.msi",
+            "hash": "6f5bd9f8260b11ea839f6176ece82a808fedc4307ec30ca13b79a9113ff3fff5"
         }
     },
-    "installer": {
-        "script": [
-            "uniextract \"$original_dir\\quicker.msi_\" \"$dir\"",
-            "Start-Sleep 10"
-        ]
-    },
-    "persist": "Quicker\\Quicker.exe.config",
-    "bin": "Quicker\\Quicker.exe",
+    "extract_dir": "Quicker",
     "shortcuts": [
         [
-            "Quicker\\Quicker.exe",
+            "Quicker.exe",
             "Quicker"
         ]
     ],
+    "pre_install": [
+        ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
+        "persist -dir @(\"$user_LocalAppData\\Quicker\",\"$user_Documents\\Quicker\") @(\"$persist_dir\\Quicker\",\"$persist_dir\\Quicker_Documents\")",
+        "create_app_lnk \"$dir\\Quicker.exe\" \"$desktop\\Quicker.lnk\""
+    ],
+    "pre_uninstall": [
+        "$bucket=(scoop bucket list | where-Object { $_.Source -match '(gitee|github).com/abgox/abgo_bucket'})[0].Name",
+        ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
+        "stop_process",
+        "remove_files @(\"$desktop\\Quicker.lnk\",\"$user_Documents\\Quicker\",\"$user_LocalAppData\\Quicker\")"
+    ],
     "checkver": {
-        "url": "https://getquicker.net/Download",
-        "regex": "(?sm)<h5>.*?<small.*?>.*?</small>.*?<h5>.*?<small.*?>.*?([\\d.]+).*?</small>"
+        "url": "https://getquicker.net/open/api/quicker/versionhistory",
+        "jsonpath": "$[0].version"
     },
     "autoupdate": {
         "architecture": {
-            "32bit": {
-                "url": "https://getquicker.net/download/item/win_x86#/quicker.msi"
-            },
             "64bit": {
-                "url": "https://getquicker.net/download/item/win_x64#/quicker.msi"
+                "url": "https://getquicker.net/download/item/fast_x64#/quiker.msi"
+            },
+            "32bit": {
+                "url": "https://getquicker.net/download/item/fast_x86#/quiker.msi"
             }
         }
     }
