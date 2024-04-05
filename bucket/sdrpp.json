@@ -1,0 +1,21 @@
+{
+    "version": "1.1.0",
+    "description": "The bloat-free SDR software",
+    "homepage": "https://github.com/AlexandreRouma/SDRPlusPlus",
+    "license": "GPL-3.0 license",
+    "url": "https://github.com/AlexandreRouma/SDRPlusPlus/releases/download/nightly/sdrpp_windows_x64.zip",
+    "hash": "60F415342289A1448D6240DD011CC0E883D88A7DF112E3827F41B9894B2D409D",
+    "bin": "sdrpp.exe",
+    "shortcuts": [
+        [
+            "sdrpp.exe",
+            "sdrpp"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/AlexandreRouma/SDRPlusPlus"
+    },
+    "autoupdate": {
+        "url": "https://github.com/AlexandreRouma/SDRPlusPlus/releases/download/nightly/sdrpp_windows_x64.zip"
+    }
+}
