@@ -1,12 +1,13 @@
 {
-    "version": "1.3.0",
+    "version": "1.16.1",
     "description": "Wikidata changes fetcher.",
     "homepage": "https://github.com/the-qa-company/wiki-changes",
     "license": "https://github.com/the-qa-company/wiki-changes/blob/master/LICENSE.md",
+    "hash": "zzzzzzzzzzz",
     "suggest": {
         "JDK": "java/openjdk"
     },
-    "url": "https://github.com/the-qa-company/wiki-changes/releases/download/v1.3.0/wikidata-changes.zip",
+    "url": "https://github.com/the-qa-company/wiki-changes/releases/download/v1.3.0/qendpoint-cli.zip",
     "extract_dir": "wikidata-changes-1.3.0",
     "env_add_path": "bin",
     "checkver": {
@@ -15,7 +16,7 @@
     },
     "autoupdate": {
         "url": "https://github.com/the-qa-company/wiki-changes/releases/download/v$version/wikidata-changes.zip",
-        "extract_dir": "wikidata-changes-$version",
+        "extract_dir": "wikidata-changes",
         "env_add_path": "bin"
     }
 }
