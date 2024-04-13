@@ -9,7 +9,7 @@
     "suggest": {
         "Encoders": "extras/foobar2000-encoders"
     },
-    "url": "https://www.videohelp.com/download/foobar2000_v2.1.4.exe#/dl.7z",
+    "url": "https://www.foobar2000.org/files/foobar2000_v2.1.4.exe#/dl.7z",
     "hash": "9be23da2b8505180a1f94520dab6e6a741dbe961520bf4ae1eb6a0e68d1f811d",
     "installer": {
         "script": [
@@ -47,6 +47,6 @@
         "regex": "foobar2000_v([\\d.]+)\\."
     },
     "autoupdate": {
-        "url": "https://www.videohelp.com/download/foobar2000_v$version.exe#/dl.7z"
+        "url": "https://www.foobar2000.org/files/foobar2000_v$version.exe#/dl.7z"
     }
 }
