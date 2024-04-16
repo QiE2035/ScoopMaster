@@ -5,7 +5,7 @@
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://mirror.clarkson.edu/blender/release/Blender4.1/blender-4.1.1-windows-x64.zip",
+            "url": "https://download.blender.org/release/Blender4.1/blender-4.1.1-windows-x64.zip",
             "hash": "40b4829888770b93aafe96875e00a12e781720010dbbad3aa898362ea3cad62c",
             "extract_dir": "blender-4.1.1-windows-x64"
         }
@@ -24,7 +24,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://mirror.clarkson.edu/blender/release/Blender$majorVersion.$minorVersion/blender-$version-windows-x64.zip",
+                "url": "https://download.blender.org/release/Blender$majorVersion.$minorVersion/blender-$version-windows-x64.zip",
                 "extract_dir": "blender-$version-windows-x64"
             }
         },

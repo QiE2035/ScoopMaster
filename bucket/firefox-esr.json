@@ -17,6 +17,10 @@
         "32bit": {
             "url": "https://archive.mozilla.org/pub/firefox/releases/115.10.0esr/win32/en-US/Firefox%20Setup%20115.10.0esr.exe#/dl.7z",
             "hash": "sha512:cc9d9629b5bd597162519601b6418f2571073533c749147fc6a69464934acfd4fe5e864c3a8d5cc8653a003c045e5f55da932a81d5e2db872081a684374e6de7"
+        },
+        "arm64": {
+            "url": "https://archive.mozilla.org/pub/firefox/releases/115.10.0esr/win64-aarch64/en-US/Firefox%20Setup%20115.10.0esr.exe#/dl.7z",
+            "hash": "sha512:0352b468d72a5c3d8ae44c451ade11e80a71cc066460c6dd4943798966569ec3b9bfba8b30007f1c29c19ee544d5c563c57508e416719cd5335d98a9459ff568"
         }
     },
     "extract_dir": "core",
@@ -67,6 +71,13 @@
                 "hash": {
                     "url": "https://archive.mozilla.org/pub/firefox/releases/$versionesr/SHA512SUMS",
                     "regex": "$sha512\\s+win32/en-US/$basename"
+                }
+            },
+            "arm64": {
+                "url": "https://archive.mozilla.org/pub/firefox/releases/$versionesr/win64-aarch64/en-US/Firefox%20Setup%20$versionesr.exe#/dl.7z",
+                "hash": {
+                    "url": "https://archive.mozilla.org/pub/firefox/releases/$versionesr/SHA512SUMS",
+                    "regex": "$sha512\\s+win64-aarch64/en-US/$basename"
                 }
             }
         }
