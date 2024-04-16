@@ -1,12 +1,12 @@
 {
-    "version": "8.6",
+    "version": "8.8",
     "description": "Cross-platform GUI client for GIT users",
     "homepage": "https://github.com/sourcegit-scm/sourcegit",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/sourcegit-scm/sourcegit/releases/download/v8.6/SourceGit.win-x64.zip",
-            "hash": "692d1f329bdb8e2af2b92955a5afc0f781cc6ae416505812832a1a7f1d69065a"
+            "url": "https://github.com/sourcegit-scm/sourcegit/releases/download/v8.8/SourceGit.win-x64.zip",
+            "hash": "ff0e8d921aa24dff5556deda0b35f01701b8cddb66f38fd64ddc359e6e69e861"
         }
     },
     "extract_dir": "SourceGit",
