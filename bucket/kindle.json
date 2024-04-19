@@ -17,7 +17,12 @@
         "regex": "(?<Version>\\d+(\\.\\d+)*)以及(?<URL>.*)$",
         "replace": "${Version}"
     },
-    "shortcuts": [["Kindle.exe", "Kindle"]],
+    "shortcuts": [
+        [
+            "Kindle.exe",
+            "Kindle"
+        ]
+    ],
     "autoupdate": {
         "url": "$matchURL#/download.7z",
         "hash": {
