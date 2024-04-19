@@ -1,21 +1,21 @@
 {
-  "homepage":"https://ohmygit.org/",
-  "description": "An open source game about learning Git!",
-  "license": "Unknown",
-  "version": "0.6.4",
-  "url": "https://sourceforge.net/projects/icecreamzeng/files/games/oh-my-git/0.6.4/oh-my-git-windows.zip",
-  "shortcuts": [
-	    [
-	        "oh-my-git.exe",
-	        "oh-my-git"
-	    ]
+    "homepage": "https://ohmygit.org/",
+    "description": "An open source game about learning Git!",
+    "license": "Unknown",
+    "version": "0.6.5",
+    "url": "https://sourceforge.net/projects/icecreamzeng/files/games/oh-my-git/0.6.5/oh-my-git-windows.zip",
+    "shortcuts": [
+        [
+            "oh-my-git.exe",
+            "oh-my-git"
+        ]
     ],
-  "hash":"78859338fdab88b2b358977ec23a42b35621fbc72735aa6e4f27e0b8fd4b4c7f",
-  "checkver": {
+    "hash": "acc76255a4163f3597f4c45f4ce7f4f6978a28155a047515e6dfc585da8d7a43",
+    "checkver": {
         "url": "https://sourceforge.net/projects/icecreamzeng/files/games/oh-my-git/",
         "regex": "version:([\\d.]+)"
     },
-  "autoupdate": {
+    "autoupdate": {
         "url": "https://sourceforge.net/projects/icecreamzeng/files/games/oh-my-git/$version/oh-my-git-windows.zip"
-    },
+    }
 }
