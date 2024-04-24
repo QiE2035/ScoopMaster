@@ -1,10 +1,17 @@
 {
     "version": "123.0.6312.133",
-    "description": "Chromium fork for Windows named after radioactive element No. 90",
+    "description": "Chromium fork for Linux, Windows, MacOS, Android, and Raspberry Pi named after radioactive element No. 90.",
     "homepage": "https://thorium.rocks/",
-    "license": "BSD-3-Clause",
-    "url": "https://github.com/Alex313031/Thorium-Win/releases/download/M123.0.6312.133/Thorium_SSE3_123.0.6312.133.zip",
-    "hash": "90498c885f4ec21badd948cb84f81a846bf853de58551248df94c9dd9b074fd8",
+    "license": {
+        "identifier": "BSD 3-Clause",
+        "url": "https://github.com/Alex313031/Thorium-Win/blob/main/LICENSE"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Alex313031/Thorium-Win/releases/download/M123.0.6312.133/Thorium_SSE3_123.0.6312.133.zip",
+            "hash": "90498c885f4ec21badd948cb84f81a846bf853de58551248df94c9dd9b074fd8"
+        }
+    },
     "bin": [
         [
             "bin\\thorium.exe",
@@ -28,11 +35,16 @@
     "env_set": {
         "CHROME_EXECUTABLE": "$dir\\thorium.exe"
     },
+    "persist": "USER_DATA",
     "checkver": {
         "github": "https://github.com/Alex313031/Thorium-Win",
-        "regex": "M([\\d]+\\.[\\d]+\\.[\\d]+\\.[\\d]+)"
+        "regex": "/releases/tag/M(?<version>(?:\\d+\\.){3}\\d+)"
     },
     "autoupdate": {
-        "url": "https://github.com/Alex313031/Thorium-Win/releases/download/M$version/Thorium_SSE3_$version.zip"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Alex313031/Thorium-Win/releases/download/M$version/Thorium_SSE3_$version.zip"
+            }
+        }
     }
 }
