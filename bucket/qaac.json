@@ -6,8 +6,10 @@
     "notes": [
         "To use QAAC, you must either install iTunes via installer (Not Microsoft Store version) or copy related files to QTFiles or QTFiles64 (x64).",
         "You can check out more details and download files at https://github.com/AnimMouse/QTFiles",
+        "If you want to extract files manually, Find iTunes's installation folder and copy items mentioned in the webpage above.",
         "",
-        "Some extra files might needed to use specific features. See https://github.com/nu774/qaac/wiki/Installation"
+        "Some extra files might needed to use specific features. See https://github.com/nu774/qaac/wiki/Installation for more details.",
+        "These files should also be placed in QTFiles or QTFiles64 (x64), it is fine to make use of a symbolic link to the actual file."
     ],
     "suggest": {
         "wavpack": "main/wavpack",
