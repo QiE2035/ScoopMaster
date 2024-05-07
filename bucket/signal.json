@@ -9,15 +9,13 @@
             "hash": "sha512:89e68f2983056e4ceef62148189edc9cde7b95d0aff3251d5436ad6fde12eafe65eb35530a615dc536adab3b7d6d0fceb10125243db89faa4c3dd6637719719d",
             "pre_install": [
                 "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
-                "Remove-Item \"$dir\\`$*\", \"$dir\\Uninstall*.exe\" -Recurse -Force",
-                "Remove-Item \"$dir\\resources\\app-update.yml\" -Recurse -Force"
+                "Remove-Item \"$dir\\`$*\", \"$dir\\Uninstall*.exe\" -Recurse -Force"
             ]
         }
     },
-    "bin": "signal.exe",
     "shortcuts": [
         [
-            "signal.exe",
+            "Signal.exe",
             "Signal"
         ]
     ],
