@@ -4,18 +4,18 @@
     "license": "https://www.gnu.org/licenses/gpl-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://download.tortoisegit.org/tgit/2.16.0.0/TortoiseGit-2.16.0.0-64bit.msi",
-            "hash": "fc5b291a7c901d177cd28b7114fe4a8a8af9502124d49a2de86a14b1b37035c5",
-            "extract_dir": "Files\\tortgit"
+            "url": "https://scoop-packages.itsmtaxud.priv/packages/tortoisegit/TortoiseGit-2.16.0.0-64bit.msi",
+            "hash": "md5:6C4F86FAC60A9EF581DBC9BD7F4D05BC",
+            "extract_dir": "tortgit"
         },
         "32bit": {
             "url": "https://download.tortoisegit.org/tgit/2.16.0.0/TortoiseGit-2.16.0.0-32bit.msi",
-            "hash": "md5:a13b4c40f1eaca16dfacb69853e942a0",
-            "extract_dir": "Files\\tortgit"
+            "hash": "md5:A13B4C40F1EACA16DFACB69853E942A0",
+            "extract_dir": "tortgit"
         }
     },
     "pre_install": [
-    "$installDir = \"$env:ProgramData\\scoop\\apps\\tortgit\\current\"",
+    "$installDir = \"$env:ProgramData\\scoop\\apps\\tortoisegit\\current\"",
     "$url = \"https://download.tortoisegit.org/tgit/2.16.0.0/TortoiseGit-2.16.0.0-64bit.msi\"",
     "$msiFile = Join-Path $env:TEMP 'TortoiseGit.msi'",
     "Invoke-WebRequest -Uri $url -OutFile $msiFile",
@@ -23,14 +23,14 @@
     "Remove-Item $msiFile",
     "[Environment]::SetEnvironmentVariable(\"GIT_INSTALL_ROOT\", \"C:\\ProgramData\\scoop\\apps\\git\\current\bin\", \"Machine\")",
     "$shortcutPath = \"$env:ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\TortoiseGit Settings.lnk\"",
-    "$targetPath = \"$env:ProgramData\\scoop\\apps\\tortgit\\current\\bin\\TortoiseGitProc.exe\"",
+    "$targetPath = \"$env:ProgramData\\scoop\\apps\\tortoisegit\\current\\bin\\TortoiseGitProc.exe\"",
     "$WScriptShell = New-Object -ComObject WScript.Shell",
     "$shortcut = $WScriptShell.CreateShortcut($shortcutPath)",
     "$shortcut.TargetPath = $targetPath",
     "$shortcut.Arguments = '/command:settings'",
     "$shortcut.Save()",
     "$shortcutPath = \"$env:ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\TortoiseGit.lnk\"",
-    "$targetPath = \"$env:ProgramData\\scoop\\apps\\tortgit\\current\\bin\\TortoiseGitProc.exe\"",
+    "$targetPath = \"$env:ProgramData\\scoop\\apps\\tortoisegit\\current\\bin\\TortoiseGitProc.exe\"",
     "$WScriptShell = New-Object -ComObject WScript.Shell",
     "$shortcut = $WScriptShell.CreateShortcut($shortcutPath)",
     "$shortcut.TargetPath = $targetPath",
