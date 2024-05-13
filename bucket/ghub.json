@@ -10,24 +10,8 @@
   "hash": "e13d766bcf9fde512ac9fe904ba4ab1b1f39303f7c8bb76028c7fb5a0c99e638",
   "pre_install": [
     "if (!(is_admin)) { error \"$app requires admin rights to $cmd\"; break }",
-    "Start-Process \"$dir\\$fname\" -Wait -Verb 'RunAs' -Args '/s'; Remove-Item \"$dir\\$fname\""
+    "Start-Process \"$dir\\$fname\" -Wait -Verb 'RunAs' -Args '--silent'; Remove-Item \"$dir\\$fname\""
   ],
-  "installer": {
-    "script": [
-      "$programname = \"Logitech G HUB*\"",
-      "$ProgramFiles = [Environment]::GetFolderPath(\"ProgramFiles\")",
-      "$filepath = \"$ProgramFiles\\LGHUB\\lghub.exe\"",
-      "if(((Test-Path -Path $filepath -PathType Leaf) -eq $false) -or ((Get-Command $filepath).Version -lt [System.Version]\"$version\"))",
-      "{",
-      "   &\"$dir\\lghub_installer.exe\" /quiet | Out-Null",
-      "   if(((Test-Path -Path $filepath -PathType Leaf) -eq $false) -or ((Get-Command $filepath).Version -lt [System.Version]\"$version\"))",
-      "   {",
-      "       exit 1",
-      "   }",
-      "}",
-      "if (Test-Path -Path \"$dir\\lghub_installer.exe\") { Remove-Item \"$dir\\lghub_installer.exe\" -Force }"
-    ]
-  },
   "post_install": [
     "$programname = \"programname\"",
     "$CommonDesktopPath = [Environment]::GetFolderPath(\"CommonDesktopDirectory\")",
