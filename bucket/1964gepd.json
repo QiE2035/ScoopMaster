@@ -11,6 +11,12 @@
     },
     "extract_dir": "1964",
     "persist": "save",
+    "shortcuts": [
+        [
+            "1964.exe",
+            "1964 GEPD"
+        ]
+    ],
     "checkver": {
         "github": "https://github.com/Graslu/1964GEPD",
         "regex": "<code.*>(?<version>[A-Za-z0-9]{7})</code>"
