@@ -9,10 +9,10 @@
   "pre-extract": [
     {
       "cmd": "mkdir",
-      "args": ["podman-tui-$version"]
+      "args": ["podman-tui"]
     }
   ],
-  "extract_dir": "podman-tui-$version",
+  "extract_dir": "podman-tui",
   "checkver": {
     "url": "https://api.github.com/repos/containers/podman-tui/releases/latest",
     "regex": "v(\\d+\\.\\d+\\.\\d+)"
