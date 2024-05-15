@@ -14,8 +14,9 @@
         ]
     ],
     "checkver": {
-        "url": "https://automeris.io/download.html",
-        "re": "WebPlotDigitizer-(?<version>[\\d.]+)-win32-x64.zip"
+        "url": "https://automeris.io/downloads/",
+        "re": "WebPlotDigitizer-(?<version>[\\d.]+)-win32-x64.zip",
+        "reverse": true
     },
     "autoupdate": {
         "url": "https://automeris.io/downloads/WebPlotDigitizer-$version-win32-x64.zip",
