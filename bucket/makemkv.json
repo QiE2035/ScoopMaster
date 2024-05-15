@@ -5,6 +5,7 @@
     "license": "Shareware",
     "url": "https://www.makemkv.com/download/Setup_MakeMKV_v1.17.7.exe#/dl.7z",
     "hash": "98268f1ca22130ec95d27c872d7802b74a14de7b52b45ae54d9af10631330e8c",
+    "bin": "makemkvcon.exe",
     "shortcuts": [
         [
             "makemkv.exe",
