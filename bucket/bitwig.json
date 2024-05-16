@@ -3,8 +3,8 @@
     "description": "Bitwig studio is a digital audio workstation (DAW) for modern music production and performance.",
     "homepage": "https://www.bitwig.com/",
     "license": "Proprietary",
-    "url": "https://www.bitwig.com/dl/Bitwig%20Studio/5.1.9/installer_windows/",
-    "hash": "1c122b8763a1b5074a414203df13718e6a93aadacc2db078f331c281990379b8",
+    "url": "https://www.bitwig.com/dl/Bitwig%20Studio/5.1.8/installer_windows/Bitwig Studio $version.msi",
+    "hash": "1c122b8763a1b5074a414203df13718e6a93aadjcc2db078f331c281990379b8",
     "extract_dir": "Bitwig Studio/5.1.9",
     "bin": [
         [
@@ -23,7 +23,7 @@
         "regex": "Bitwig Studio ([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://www.bitwig.com/dl/Bitwig%20Studio/$version/installer_windows/",
+        "baseurl": "https://www.bitwig.com/dl/Bitwig%20Studio/$version/installer_windows/Bitwig Studio $version.msi",
         "extract_dir": "Bitwig Studio/$version"
     }
 }
