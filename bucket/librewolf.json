@@ -1,8 +1,9 @@
 {
     "version": "126.0-1",
-    "description": "A fork of Firefox, focused on privacy, security and freedom",
+    "description": "A fork of Firefox, focused on privacy, security and freedom. This variant does not use the portable launcher and makes sure the Scoop profile is used by default.",
     "homepage": "https://librewolf.net/",
     "license": "MPL-2.0",
+    "notes": "After installation, the profile manager will be run to choose the right default profile.",
     "architecture": {
         "64bit": {
             "url": "https://gitlab.com/api/v4/projects/44042130/packages/generic/librewolf/126.0-1/librewolf-126.0-1-windows-x86_64-portable.zip",
@@ -13,33 +14,31 @@
             "hash": "4a20cb60ee55a0506adb00210bc222e6ee644b684aa84d720296b8bc04d387b7"
         }
     },
-    "extract_dir": "librewolf-126.0-1",
-    "pre_install": [
-        "Remove-Item \"$dir\\LibreWolf-WinUpdater.exe\"",
-        "# Customizing LibreWolf Using AutoConfig",
-        "# https://support.mozilla.org/en-US/kb/customizing-firefox-using-autoconfig",
+    "extract_dir": "librewolf-126.0-1\\LibreWolf",
+    "post_install": [
         "$Addition = \"$persist_dir\\addition\"",
         "if (Test-Path $Addition) {",
         "  info 'Copying additional items...'",
-        "  Copy-Item -Path $Addition\\* -Destination \"$dir\" -Force -Recurse -ErrorAction SilentlyContinue",
-        "}"
+        "  Copy-Item -Path $Addition\\* -Destination $dir -Force -Recurse -ErrorAction SilentlyContinue",
+        "}",
+        "librewolf -CreateProfile \"Scoop $persist_dir\\profile\"",
+        "start -NoNewWindow librewolf -ArgumentList '-P'"
     ],
     "bin": [
         [
-            "LibreWolf-Portable.exe",
+            "librewolf.exe",
             "librewolf"
         ]
     ],
     "shortcuts": [
         [
-            "LibreWolf-Portable.exe",
+            "librewolf.exe",
             "LibreWolf"
         ]
     ],
-    "persist": "Profiles",
-    "pre_uninstall": [
-        "Copy-Item \"$dir\\LibreWolf\\defaults\\pref\\*\" \"$persist_dir\\LibreWolf\\defaults\\pref\" -Exclude 'channel-prefs.js'",
-        "Copy-Item \"$dir\\LibreWolf\\*.js\", \"$dir\\LibreWolf\\*.cfg\" \"$persist_dir\\LibreWolf\" -Exclude 'librewolf.cfg'"
+    "persist": [
+        "distribution",
+        "profile"
     ],
     "checkver": {
         "url": "https://gitlab.com/api/v4/projects/44042130/releases/permalink/latest",
@@ -57,6 +56,6 @@
         "hash": {
             "url": "$url.sha256sum"
         },
-        "extract_dir": "librewolf-$version"
+        "extract_dir": "librewolf-$version\\LibreWolf"
     }
 }
