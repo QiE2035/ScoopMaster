@@ -9,5 +9,11 @@
         "input-leapd.exe",
         "input-leaps.exe",
         "input-leapc.exe"
+    ],
+    "shortcuts": [
+        [
+            "input-leap.exe",
+            "Input-Leap"
+        ]
     ]
 }
