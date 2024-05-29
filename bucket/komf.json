@@ -1,15 +1,13 @@
 {
     "version": "0.34.0",
-    "description": "Komga metadata fetcher",
+    "description": "Komga and Kavita metadata fetcher.",
     "homepage": "https://github.com/Snd-R/komf",
     "license": "MIT",
+    "notes": "For a guide on how to use this app, click here: https://github.com/Snd-R/komf#running",
     "suggest": {
-        "JDK": [
-            "java/oraclejdk",
-            "java/openjdk"
-        ]
+        "Java17": "java/openjdk17",
+        "Komga": "extras/komga"
     },
-    "notes": "Default URL is http://localhost:8085",
     "url": "https://github.com/Snd-R/komf/releases/download/0.34.0/komf-0.34.0.jar#/komf.jar",
     "hash": "47873406fae90bf9b74282fcbb3f885bd7661dd87c9a70e7bcfdb04ca8781cb6",
     "bin": [
@@ -20,9 +18,7 @@
         ]
     ],
     "persist": "config",
-    "checkver": {
-        "github": "https://github.com/Snd-R/komf"
-    },
+    "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/Snd-R/komf/releases/download/$version/komf-$version.jar#/komf.jar"
     }
