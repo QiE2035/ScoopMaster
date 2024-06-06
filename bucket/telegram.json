@@ -7,6 +7,10 @@
         "64bit": {
             "url": "https://github.com/telegramdesktop/tdesktop/releases/download/v5.1.4/tportable-x64.5.1.4.zip",
             "hash": "d5f6d4525c7d06e40a7106e8433511dd27f6ebc7e6f4adf100c741fdca227dbc"
+        },
+        "32bit": {
+            "url": "https://github.com/telegramdesktop/tdesktop/releases/download/v5.1.4/tportable.5.1.4.zip",
+            "hash": "377e36fd80682e154d9a06d3db878b33d1464dd3a62229de71732f9c1eff87a5"
         }
     },
     "extract_dir": "Telegram",
@@ -26,6 +30,9 @@
         "architecture": {
             "64bit": {
                 "url": "https://github.com/telegramdesktop/tdesktop/releases/download/v$version/tportable-x64.$version.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/telegramdesktop/tdesktop/releases/download/v$version/tportable.$version.zip"
             }
         }
     }
