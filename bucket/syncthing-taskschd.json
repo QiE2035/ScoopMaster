@@ -38,13 +38,17 @@
             "$Settings = New-ScheduledTaskSettingsSet -DontStopIfGoingOnBatteries -RunOnlyIfNetworkAvailable -NetworkName Network -AllowStartIfOnBatteries",
             "$Settings.ExecutionTimeLimit = 'PT0S'",
             "Register-ScheduledTask Syncthing -Action $Action -Trigger $Trigger -Settings $Settings",
+            "Write-Host 'Starting Syncthing task...'",
+            "Start-ScheduledTask -TaskName Syncthing",
         "}",
         "if ($cmd -eq \"update\") {",
-        "Write-Host 'Starting Syncthing task...'",
+            "Write-Host 'Starting Syncthing task...'",
             "Start-ScheduledTask -TaskName Syncthing",
         "}"
     ],
     "post_uninstall":[
+        "write-host 'Stopping Syncthing task...'",
+        "Stop-ScheduledTask -TaskName Syncthing",
         "Write-Host 'Unregistering Syncthing task...'",
         "Unregister-ScheduledTask -TaskName 'Syncthing' -Confirm:$false"
     ],
