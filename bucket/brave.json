@@ -1,5 +1,5 @@
 {
-    "version": "1.66.118",
+    "version": "1.67.115",
     "description": "Secure, Fast & Private Web Browser with Adblocker",
     "homepage": "https://brave.com",
     "license": {
@@ -8,37 +8,36 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.66.118/brave-v1.66.118-win32-x64.zip",
-            "hash": "35613960cee93b93d903fdeab132d81acdc5333e39373e2f7834ec28471096c8"
-        },
-        "32bit": {
-            "url": "https://github.com/brave/brave-browser/releases/download/v1.66.118/brave-v1.66.118-win32-ia32.zip",
-            "hash": "b58b2d58d64c490dab97f94d3d535782d5f5335d25b19c39858d5add0ae8a899"
+            "url": "https://github.com/brave/brave-browser/releases/download/v1.67.115/brave-v1.67.115-win32-x64.zip",
+            "hash": "8a7145d0930e13430fabed8e1360853ae5092d752f5d0e30d7d8073983f2b8b2"
         }
     },
     "bin": [
         [
             "brave.exe",
-            "brave",
-            "--user-data-dir=\"$dir\\User Data\""
+            "brave"
         ]
     ],
     "shortcuts": [
         [
             "brave.exe",
             "Brave",
-            "--user-data-dir=\"$dir\\User Data\""
+            "--force-device-scale-factor=1.5"
         ]
     ],
     "post_install": [
-        "if (!(Test-Path \"$dir\\User Data\\*\") -and (Test-Path \"$persist_dir\\data\")) {",
-        "    info '[Portable Mode]: Copying user data from portapps data directory . . .'",
-        "    Copy-Item \"$persist_dir\\data\\*\" \"$dir\\User Data\" -Recurse",
-        "}",
         "if (!(Test-Path \"$dir\\User Data\\*\") -and (Test-Path \"$env:LocalAppData\\BraveSoftware\\Brave-Browser\\User Data\")) {",
         "    info '[Portable Mode]: Copying user data from local application data directory . . .'",
         "    Copy-Item \"$env:LocalAppData\\BraveSoftware\\Brave-Browser\\User Data\\*\" \"$dir\\User Data\" -Recurse",
-        "}"
+        "}",
+        "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name scoop-private) scripts/Utils-private.psm1)",
+        "Mount-ExternalRuntimeData -Source \"$persist_dir\\User Data\" -Target \"$env:LocalAppData\\BraveSoftware\\Brave-Browser\\User Data\"",
+        "Remove-Module -Name Utils-private"
+    ],
+    "post_uninstall": [
+        "Import-Module $(Join-Path $(Find-BucketDirectory -Root -Name scoop-private) scripts/Utils-private.psm1)",
+        "Dismount-ExternalRuntimeData -Target \"$env:LocalAppData\\BraveSoftware\\Brave-Browser\\User Data\"",
+        "Remove-Module -Name Utils-private"
     ],
     "persist": "User Data",
     "checkver": {
@@ -49,9 +48,6 @@
         "architecture": {
             "64bit": {
                 "url": "https://github.com/brave/brave-browser/releases/download/v$version/brave-v$version-win32-x64.zip"
-            },
-            "32bit": {
-                "url": "https://github.com/brave/brave-browser/releases/download/v$version/brave-v$version-win32-ia32.zip"
             }
         },
         "hash": {
