@@ -3,6 +3,10 @@
     "description": "Commet is a client for Matrix focused on providing a feature rich experience while maintaining a simple interface.",
     "homepage": "https://commet.chat",
     "license": "AGPL-3.0-or-later",
+    "notes": [
+        "Config and data are stored in %USERPROFILE%\\AppData\\Roaming\\commet.chat\\commet",
+        "They will not be automatically removed during uninstallation even with -p flag. Delete them manually if needed."
+    ],
     "url": "https://github.com/commetchat/commet/releases/download/v0.2.1/commet-windows.zip",
     "hash": "85af467b42d990888d13073b0f027dff39a2ef2e1a4288cfec52e13b5fb81a98",
     "extract_dir": "Release",
