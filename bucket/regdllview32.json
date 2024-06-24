@@ -17,11 +17,10 @@
             }
         }
     },
-    "bin": "RegDllView.exe",
     "shortcuts": [
         [
             "RegDllView.exe",
-            "NirSoft\\RegDllView - Displays the list of all registered files"
+            "NirSoft\\RegDllView(x86)"
         ]
     ]
 }
