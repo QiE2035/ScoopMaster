@@ -17,8 +17,8 @@
     },
     "bin": "Editor\\Unity.exe",
     "checkver": {
-        "url": "https://unity.com/releases/editor/lts-releases.xml",
-        "regex": "unityhub://2021(.[0-9]+.*?)/(.*)&lt;",
+        "url": "https://unity.com/releases/editor/archive",
+        "regex": "unityhub://2021.(\\d+\\.\\d+f\\d+)/([a-f0-9]+)",
         "replace": "2021${1}"
     },
     "autoupdate": {
