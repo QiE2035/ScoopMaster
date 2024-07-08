@@ -17,7 +17,7 @@
         "script": [
             "$installDir = \"$env:LOCALAPPDATA\\FaForever\"",
             "if (!(Test-Path $installDir)) { New-Item -Path $installDir -ItemType Directory | Out-Null }",
-            "Start-Process -Wait -FilePath \"$dir\\FaForever.exe\" -ArgumentList \"/S /D=$installDir\"",
+            "Start-Process -Wait -FilePath \"$dir\\FaForever.exe\" -ArgumentList \"/S /NS /D=$installDir\"",
             "Remove-Item \"$dir\\FaForever.exe\" -Force"
         ]
     },
