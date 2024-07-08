@@ -5,11 +5,11 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/picguard/picguard/releases/download/v1.0.0+298/picguard_1.0.0+298_windows_x86_64.exe#/PicGuard.exe",
+            "url": "https://github.com/picguard/picguard/releases/download/v1.0.0+298/picguard_1.0.0+298_windows_x86_64.exe#/PicGuardSetup.exe",
             "hash": "470a73c3eff80c820f33d5fde83d31449d83e677398ce130c7094bde95e11491"
         },
         "32bit": {
-            "url": "https://github.com/picguard/picguard/releases/download/v1.0.0+298/picguard_1.0.0+298_windows_x86_64.exe#/PicGuard.exe",
+            "url": "https://github.com/picguard/picguard/releases/download/v1.0.0+298/picguard_1.0.0+298_windows_x86_64.exe#/PicGuardSetup.exe",
             "hash": "470a73c3eff80c820f33d5fde83d31449d83e677398ce130c7094bde95e11491"
         }
     },
@@ -18,8 +18,8 @@
         "script": [
             "$installDir = \"$env:LOCALAPPDATA\\PicGuard\"",
             "if (!(Test-Path $installDir)) { New-Item -Path $installDir -ItemType Directory | Out-Null }",
-            "Start-Process -Wait -FilePath \"$dir\\PicGuard.exe\" -ArgumentList \"/S /D=$installDir\"",
-            "Remove-Item \"$dir\\PicGuard.exe\" -Force"
+            "Start-Process -Wait -FilePath \"$dir\\PicGuardSetup.exe\" -ArgumentList \"/S /D=$installDir\"",
+            "Remove-Item \"$dir\\PicGuardSetup.exe\" -Force"
         ]
     },
     "uninstaller": {
@@ -33,10 +33,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/picguard/picguard/releases/download/v$version/picguard_$version_windows_x86_64.exe#/PicGuard.exe"
+                "url": "https://github.com/picguard/picguard/releases/download/v$version/picguard_$version_windows_x86_64.exe#/PicGuardSetup.exe"
             },
             "32bit": {
-                "url": "https://github.com/picguard/picguard/releases/download/v$version/picguard_$version_windows_x86_64.exe#/PicGuard.exe"
+                "url": "https://github.com/picguard/picguard/releases/download/v$version/picguard_$version_windows_x86_64.exe#/PicGuardSetup.exe"
             }
         }
     }
