@@ -1,42 +1,30 @@
 {
     "version": "4.20",
-    "description": "A hard drive disk space analyser that finds the files and folders using the most space.",
-    "homepage": "https://diskanalyzer.com/",
-    "license": "Unknown",
-    "url": "https://diskanalyzer.com/files/wiztree_4_20_portable.zip",
-    "hash": "bfa584a66823aabd14ea94d6e85ad2ad3bb25098848bcb167391603dc1e215dc",
-    "architecture": {
-        "32bit": {
-            "bin": "WizTree.exe",
-            "shortcuts": [
-                [
-                    "WizTree.exe",
-                    "WizTree"
-                ]
-            ]
-        },
-        "64bit": {
-            "bin": [
-                [
-                    "WizTree64.exe",
-                    "WizTree"
-                ]
-            ],
-            "shortcuts": [
-                [
-                    "WizTree64.exe",
-                    "WizTree"
-                ]
-            ]
-        }
+    "description": "High speed disk space analyser",
+    "homepage": "https://www.diskanalyzer.com",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://www.diskanalyzer.com/eula"
     },
-    "pre_install": "if (-not (Test-Path \"$persist_dir\\WizTree3.ini\")) { New-Item \"$dir\\WizTree3.ini\" -ItemType File | Out-Null }",
+    "url": "https://www.diskanalyzer.com/files/wiztree_4_20_portable.zip",
+    "hash": "bfa584a66823aabd14ea94d6e85ad2ad3bb25098848bcb167391603dc1e215dc",
+    "pre_install": [
+        "Remove-Item $dir\\WizTree.exe",
+        "Get-ChildItem $dir\\locale -Exclude en | Remove-Item -Recurse",
+        "$manifest.persist | ForEach-Object { if (!(Test-Path $persist_dir\\$_)) { New-Item $dir\\$_ | Out-Null } }"
+    ],
+    "shortcuts": [
+        [
+            "WizTree64.exe",
+            "WizTree"
+        ]
+    ],
     "persist": "WizTree3.ini",
     "checkver": {
-        "url": "https://diskanalyzer.com/download",
-        "regex": "<h4>WizTree ([\\d.]+)"
+        "url": "https://www.diskanalyzer.com/download",
+        "regex": "V(?:&nbsp;|\\s+)([\\d.]+)(?:&nbsp;|\\s+)"
     },
     "autoupdate": {
-        "url": "https://diskanalyzer.com/files/wiztree_$majorVersion_$minorVersion_portable.zip"
+        "url": "https://www.diskanalyzer.com/files/wiztree_$underscoreVersion_portable.zip"
     }
 }
