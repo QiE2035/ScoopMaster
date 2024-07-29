@@ -5,8 +5,8 @@
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://example.com/path/to/rms.zip",
-            "hash": "md5:your_md5_hash_here"
+            "url": "https://alist.khigh.top/d/Download/rms-startup/rms.zip",
+            "hash": "3e2afb93420b5f6ad4d9251daea55b11e48b9d978baa517dbd5878f99185b672"
         }
     },
     "depends": [
