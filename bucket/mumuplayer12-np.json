@@ -38,12 +38,12 @@
             "$response = Invoke-RestMethod -Uri $url -Method Post",
             "Write-Output $response.data.mumu.version $response.data.mumu.checksum $response.data.mumu.link"
         ],
-        "regex": "([\\d.]+)\\s([A-Z\\d]{32})\\s(.*)"
+        "regex": "([\\d.]+)\\s([A-Z\\d]{32})\\shttp:(.*)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "$match3#/setup.exe",
+                "url": "http:$match3#/setup.exe",
                 "hash": {
                     "url": "http://httpbin.org/get?md5=$match2",
                     "regex": "md5=.*?$md5"
