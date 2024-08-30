@@ -3,23 +3,7 @@
     "description": "An internet file download manager",
     "homepage": "https://filecxx.com/",
     "license": "Freeware",
-    "notes": [
-        "To install the app WITH the system service, run (with admin privellages),",
-        "filec install path \"$dir\" system_service",
-        "To install the app WITHOUT the system service, run (with admin privellages),",
-        "filec install path \"$dir\"",
-        "",
-        "To uninstall the app along with the system service, run (with admin privellages),",
-        "filec -u",
-        "",
-        "To uninstall ONLY the system service, run (with admin privellages),",
-        "filec -ss remove",
-        "",
-        "For more information run,",
-        "filec -h",
-        "",
-        "If you want to scoop to uninstall the service during the un-installation process, use the `-p` switch (this will also remove all persisted files)"
-    ],
+    "notes": "If you want to scoop to uninstall the service during the un-installation process, use the `-p` switch (this will also remove all persisted files)",
     "architecture": {
         "64bit": {
             "url": "https://github.com/filecxx/FileCentipede/releases/download/v2.82.0/filecxx_2.82_win_x64.zip",
@@ -34,7 +18,7 @@
         "if ((Get-Service -Name 'filec' -ErrorAction 'SilentlyContinue') -and ($cmd -eq 'update')) {",
         "    Write-Host 'System service detected! Attempting to update the system service...' -F 'DarkGray'",
         "    if (!(is_admin)) { error \"$app requires admin rights to update the system service\"; break }",
-        "    Start-Process \"$dir\\lib\\filec.exe\" -Wait -NoNewWindow -Args @('-i', $dir, 'system_service')",
+        "    Start-Process \"$dir\\lib\\filec.exe\" -Wait -NoNewWindow -Args @('-i', 'path', $dir, 'system_service')",
         "}"
     ],
     "bin": [
@@ -46,7 +30,7 @@
     ],
     "shortcuts": [
         [
-            "fileu.exe",
+            "lib\\fileu.exe",
             "File Centipede"
         ]
     ],
