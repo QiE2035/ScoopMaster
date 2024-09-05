@@ -1,29 +1,25 @@
 {
     "version": "2.1.2",
-    "description": "",
+    "description": "Easily download and manage game cheats for your convenience",
     "homepage": "https://github.com/dyang886/Game-Cheats-Manager",
-    "license": "GPL-3.0-only",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v2.1.2/Game.Cheats.Manager.Setup.2.1.2.exe",
-            "hash": "9ecd8dd5328a13e26b8b7f7739390d5e821487488d4e1f580532324c89838ae5"
-        }
+    "license": {
+        "identifier": "GPL-3.0 license",
+        "url": "https://github.com/dyang886/Game-Cheats-Manager#GPL-3.0-1-ov-file"
     },
-    "innosetup": true,
-    "bin": "Game Cheats Manager.exe",
+    "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v2.1.2/Game.Cheats.Manager.Setup.2.1.2.exe#/dl.7z",
+    "hash": "9ecd8dd5328a13e26b8b7f7739390d5e821487488d4e1f580532324c89838ae5",
+    "extract_dir": "PFiles\\Game Cheats Manager",
     "shortcuts": [
         [
-            "Game Cheats Manager.exe",
-            "Game Cheats Manager"
+            "Final2x.exe",
+            "Final2x"
         ]
     ],
     "checkver": {
-        "github": "https://github.com/dyang886/Game-Cheats-Manager"
+        "url": "https://api.github.com/repos/dyang886/Game-Cheats-Manager/releases",
+        "regex": "/releases/tag/v([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v$version/Game.Cheats.Manager.Setup.$version.exe",
-        "hash": {
-            "mode": "download"
-        }
+        "url": "https://github.com/dyang886/Game-Cheats-Manager/releases/download/v$version/Game.Cheats.Manager.Setup.$version.exe#/dl.7z"
     }
 }
