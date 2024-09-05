@@ -1,15 +1,15 @@
 {
-  "totalDownloads": 12148237,
-  "badBuckets": 164,
-  "totalBuckets": 1974,
-  "appsDeleted": 0,
-  "appsNew": 0,
-  "apps": 48553,
-  "appsUpdated": 2,
-  "prevDate": "2024-09-05T10:53:31Z",
-  "buckets": 1810,
-  "manifests": 162376,
   "downloads": 3049,
-  "date": "2024-09-05T11:25:55Z",
-  "badManifests": 19
+  "totalBuckets": 1974,
+  "totalDownloads": 12151286,
+  "prevDate": "2024-09-05T11:25:55Z",
+  "badManifests": 19,
+  "apps": 48553,
+  "date": "2024-09-05T11:53:27Z",
+  "manifests": 162376,
+  "appsUpdated": 1,
+  "appsNew": 0,
+  "appsDeleted": 0,
+  "buckets": 1810,
+  "badBuckets": 164
 }
