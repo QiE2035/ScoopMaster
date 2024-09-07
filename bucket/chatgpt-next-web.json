@@ -8,11 +8,11 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web/releases/download/v2.15.0/NextChat_2.15.0_x64-setup.exe#/dl.7z",
-            "hash": "df0f7b38f573f8ab26d9bb50f4ba86400b76db1bc0505ae125f00add38669008"
+            "url": "https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web/releases/download/v2.15.0/NextChat_2.15.0_x64_en-US.msi",
+            "hash": "9842162444dd54af02c324d041dcf0c5ad524b11d1261779c4eee160756ae69d"
         }
     },
-    "pre_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\Unins*\" -Force -Recurse",
+    "extract_dir": "PFiles\\NextChat",
     "shortcuts": [
         [
             "NextChat.exe",
@@ -21,6 +21,6 @@
     ],
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web/releases/download/v$version/NextChat_$version_x64-setup.exe#/dl.7z"
+        "url": "https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web/releases/download/v$version/NextChat_$version_x64_en-US.msi"
     }
 }
