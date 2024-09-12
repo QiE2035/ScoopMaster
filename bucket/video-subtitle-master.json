@@ -1,13 +1,13 @@
 {
-    "version": "2024-07-01",
+    "version": "1.0.14",
     "description": "批量为视频生成字幕，并可将字幕翻译成其它语言。这是一个客户端工具, 跨平台支持 mac 和 windows 系统",
     "homepage": "https://github.com/buxuku/video-subtitle-master",
     "license": {
         "identifier": "MIT license",
         "url": "https://github.com/buxuku/video-subtitle-master#MIT-1-ov-file"
     },
-    "url": "https://github.com/Tohrusky/Final2x/releases/download/2024-07-01/Final2x-windows-x64-setup.exe#/dl.7z",
-    "hash": "f701d48a0aeddb4fea3b66692aa60ab06376d5cb731c83b524a00c1da3d4e869",
+    "url": "https://github.com/buxuku/video-subtitle-master/releases/download/v1.0.14/Video-Subtitle-Master_Windows_1.0.14_x64.exe#/dl.7z",
+    "hash": "sha512:17683fcfb18b1eafe0af3f21671d8fdd7f6c65535a26261e0246740be8b6d0f31ade6dc30f04ffab9b56a48c8a2d01ea9a34098e9b29fc9ce8abab2a9de11fd3",
     "pre_install": [
         "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
         "Remove-Item \"$dir\\`$*\" -Force -Recurse"
