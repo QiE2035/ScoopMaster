@@ -1,10 +1,10 @@
 {
-    "version": "1.0.0.a28",
-    "description": "An open-source alternative to Arc browser, based on Firefox",
+    "version": "1.0.1-a",
+    "description": "🌀 Experience tranquillity while browsing the web without people tracking you! Based on Firefox",
     "homepage": "https://www.zen-browser.app/",
     "license": "MPL-2.0",
-    "url": "https://github.com/zen-browser/desktop/releases/download/1.0.0-a.28/zen.win-generic.zip",
-    "hash": "845c171ac4e5470a382a30861973078489e74cd7cf2437af6b66a9dbf5377e7c",
+    "url": "https://github.com/zen-browser/desktop/releases/download/1.0.1-a/zen.win-specific.zip",
+    "hash": "0930733b40d3e7f2fb6565132561d9f0b59ca3862a92ebc33e32df139710224b",
     "extract_dir": "zen",
     "shortcuts": [
         [
@@ -12,8 +12,11 @@
             "Zen Browser"
         ]
     ],
-    "checkver": "github",
+    "checkver": {
+        "url": "https://www.zen-browser.app/release-notes",
+        "regex": "/release-notes/([ab\\d.-]+)"
+    },
     "autoupdate": {
-        "url": "https://github.com/zen-browser/desktop/releases/download/$version/zen.win-generic.zip"
+        "url": "https://github.com/zen-browser/desktop/releases/download/$version/zen.win-specific.zip"
     }
 }
