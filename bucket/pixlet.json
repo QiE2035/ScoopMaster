@@ -4,9 +4,9 @@
     "homepage": "https://tidbyt.dev//",
     "license": {
         "identifier": "Apache-2.0",
-        "url": "https://github.com/tidbyt/pixlet/blob/v0.33.5/LICENSE.txt"
+        "url": "https://github.com/tidbyt/pixlet/blob/latest/LICENSE.txt"
     },
-    "url": "https://github.com/tidbyt/pixlet/releases/latest",
+    "url": "https://github.com/tidbyt/pixlet/releases/download/v$version/pixlet_$version_windows_amd64.tar.gz",
     "shortcuts": [
         [ ".\\pixlet\\pixlet.exe", "Pixlet"]
     ],
