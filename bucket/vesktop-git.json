@@ -18,6 +18,7 @@
         "cd Vesktop",
         "pnpm i",
         "pnpm package --win --dir",
+        "echo 'Removing unneeded stuff' ''",
         "cd $dir",
         "Move-Item Vesktop/dist/win-unpacked win-unpacked",
         "Remove-Item -Recurse -Force Vesktop",
