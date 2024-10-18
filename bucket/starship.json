@@ -24,15 +24,7 @@
             "hash": "73f0be0b91697e685713c6b317859b3a665b1830e12780cea75456c8040a6252"
         }
     },
-    "env_set": {
-        "STARSHIP_CONFIG": "$(appdir $app $global)\\current\\config\\default.toml"
-    },
-    "post_install": [
-        "$config_dir = \"$(appdir $app $global)\\current\\config\"",
-        "starship print-config > $env:STARSHIP_CONFIG"
-    ],
     "bin": "starship.exe",
-    "persist": "config",
     "checkver": {
         "github": "https://github.com/starship/starship"
     },
