@@ -7,12 +7,17 @@
         "url": "https://github.com/red/red#license"
     },
     "url": "https://static.red-lang.org/dl/auto/win/red-31oct24-f73007beb.exe#/red.exe",
+    "hash": "6449cb96975b19bd67d64cf90d88a37f7a0505a5f71a3ab8d28232f19d372195",
     "bin": "red.exe",
     "checkver": {
         "url": "https://static.red-lang.org/dl/auto/win/history.html",
         "regex": "red-(\\w+)-(?<commit>\\w+).exe"
     },
     "autoupdate": {
-        "url": "https://static.red-lang.org/dl/auto/win/red-$version-$matchCommit.exe#/red.exe"
+        "url": "https://static.red-lang.org/dl/auto/win/red-$version-$matchCommit.exe#/red.exe",
+        "hash": {
+            "url": "http://static.red-lang.org/download.html",
+            "regex": "$basename[\\s\\S]+?$sha256"
+        }
     }
 }
