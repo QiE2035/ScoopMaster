@@ -1,12 +1,24 @@
 {
-    "homepage": "https://github.com/googlefonts/robotoslab",
     "version": "0.0.1",
-    "description": "Roboto Slab Typeface by Google. (hrbrthemes)",
+    "description": "Font from Google, serif typeface.",
+    "homepage": "https://github.com/googlefonts/robotoslab",
     "license": "Apache-2.0",
-    "url": "https://github.com/googlefonts/robotoslab/archive/refs/heads/main.zip",
+    "notes":  [
+        "echo 'To install:'",
+        "echo ''",
+        "echo '$fonts = (New-Object -ComObject Shell.Application).Namespace(0x14)`",
+        "echo 'dir $env:SCOOP/apps/roboto/current/*.ttf\" | %{ $fonts.CopyHere($_.fullname) }",
+        "echo ''",
+        "echo 'To uninstall:'",
+        "echo ''",
+        "echo 'To uninstall it completely, you have to delete it from the fonts in the control panel, which can be launched with ``control fonts``.' -Foreground Magenta"
+    ],
+    "url": "https://codeload.github.com/googlefonts/robotoslab/zip/refs/heads/main",
     "hash": "B66BD20849D4FC6EE6254B769E5DFBF351E5DE6A4F27DD4B989E2D033210179B",
+    "extract_dir": "robotoslab-main\\fonts\\ttf",
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/googlefonts/robotoslab/archive/refs/heads/main.zip"
+        "url": "https://codeload.github.com/googlefonts/robotoslab/zip/refs/heads/main"
     }
 }
+
