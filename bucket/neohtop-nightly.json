@@ -1,0 +1,18 @@
+{
+    "version": "1.0.7",
+    "description": "A modern, cross-platform system monitor built on top of Svelte, Rust, and Tauri",
+    "homepage": "https://github.com/Abdenasser/neohtop",
+    "license": "MIT",
+    "notes": "Stores data in AppData. Nightly build. Current manifest is UNSTABLE and could be broken at any time",
+    "checkver": {
+        "url": "https://api.github.com/repositories/881053158/releases",
+        "regex": "windows-nightly-([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "32bit": {
+                "url": "https://github.com/Abdenasser/neohtop/releases/download/windows-nightly-$version/NeoHtop.exe"
+            }
+        }
+    }
+}
