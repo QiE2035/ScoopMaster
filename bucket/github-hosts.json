@@ -1,0 +1,39 @@
+{
+    "version": "0.17.0",
+    "description": "GitHub最新hosts。解决GitHub图片无法显示，加速GitHub网页浏览。",
+    "homepage": "https://ineo6.github.io/hosts/",
+    "license": {
+        "identifier": "MIT license",
+        "url": "https://github.com/ineo6/hosts#MIT-1-ov-file"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Tohrusky/Final2x/releases/download/2024-10-28/Final2x-windows-x64-setup.exe#/dl.7z",
+            "hash": "e91ae1106b434d1671742bb2311dc73b7d5ed8a29f78ddf4629c88d4726ab9f0",
+            "extract_dir": "hosts-server-pkg-win-x64"
+        },
+        "arm64": {
+            "url": "https://github.com/Tohrusky/Final2x/releases/download/2024-10-28/Final2x-windows-arm64-setup.exe#/dl.7z",
+            "hash": "822bf634c9445ffcdd1a0986d807d92f4231113fa0b7af38ca02ef0bc8ae2b75",
+            "extract_dir": "hosts-server-pkg-win-arm64"
+        }
+    },
+    "bin": "hosts-server.exe",
+    "checkver": {
+        "url": "https://api.github.com/repos/ineo6/hosts/releases/latest",
+        "regex": "/releases/tag/v([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/ineo6/hosts/releases/download/v$version/hosts-server-pkg-win-x64.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/ineo6/hosts/releases/download/v$version/hosts-server-pkg-win-arm64.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/sha256sums.txt"
+        }
+    }
+}
