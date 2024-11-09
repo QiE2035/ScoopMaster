@@ -1,38 +1,41 @@
 {
-    "##": "The shortcut will be created when adding the Appx package",
-    "version": "2.1.37.5872",
-    "description": "基于UWP的第三方网易云音乐播放器",
+    "version": "2024-10-28",
+    "description": "仅供学习交流使用 | 第三方网易云音乐播放器 | A Netease Cloud Music Player",
     "homepage": "https://github.com/HyPlayer/HyPlayer",
-    "license": "GPL-3.0-only",
+    "license": {
+        "identifier": "GPL-3.0 license",
+        "url": "https://github.com/HyPlayer/HyPlayer#GPL-3.0-1-ov-file"
+    },
+    "url": "https://github.com/ModernFlyouts-Community/ModernFlyouts/releases/download/0.9.3/32669SamG.ModernFlyouts_0.9.3.0_neutral___pcy8vm99wrpcg.Msixbundle#/dl.7z",
+    "hash": "c91b2903945709fb598aef5d8205dee96fa1a2ce7ade3f033517cfc5777a1e33",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/HyPlayer/HyPlayer/releases/download/2.1.37.5872/HyPlayer_2.1.37.5872_x64_ARM64.msixbundle#/HyPlayer.msixbundle",
-            "hash": "33df3b937e70d004dc8a1e8487203d6e62c12daf7af5c7936acb56cf1634e4cd"
+            "pre_install": [
+                "$file = \"HyPlayer_$($version)_x64.msix\"",
+                "Remove-Item \"$dir\\*\" -Exclude $file -Recurse",
+                "Expand-7zipArchive \"$dir\\$file\" -Removal | Out-Null"
+            ]
+        },
+        "arm64": {
+            "pre_install": [
+                "$file = \"HyPlayer_$($version)_ARM64.msix\"",
+                "Remove-Item \"$dir\\*\" -Exclude $file -Recurse",
+                "Expand-7zipArchive \"$dir\\$file\" -Removal | Out-Null"
+            ]
         }
     },
-    "pre_install": [
-        "if ($env:CI -eq \"true\") { Return }",
-        "if ($PSVersionTable.PSVersion.Major -ge 6) { Import-Module Appx -UseWindowsPowershell 3>$null }",
-        "Add-AppxPackage \"$dir\\HyPlayer.msixbundle\" -ForceTargetApplicationShutdown -AllowUnsigned"
+    "bin": "HyPlayer.exe",
+    "shortcuts": [
+        [
+            "HyPlayer.exe",
+            "HyPlayer"
+        ]
     ],
-    "pre_uninstall": [
-        "if ($env:CI -eq \"true\") { Return }",
-        "if ($PSVersionTable.PSVersion.Major -ge 6) { Import-Module Appx -UseWindowsPowershell 3>$null }",
-        "$package = Get-AppxPackage '48848aaaaaaccd.HyPlayer'",
-        "if (!$package) { warn \"$app is already uninstalled out of scoop.\" ; return }",
-        "if ($purge) {",
-        "    Remove-AppxPackage $package",
-        "} else {",
-        "    Remove-AppxPackage $package -PreserveRoamableApplicationData",
-        "}"
-    ],
-    "notes": "本软件内置了以Toast通知形式实现的桌面歌词，如果有拖动桌面歌词/控制歌曲的需要我们建议下载【热词】 https://www.microsoft.com/store/productId/9MXFFHVQVBV9",
-    "checkver": "github",
+    "checkver": {
+        "url": "https://api.github.com/repos/HyPlayer/HyPlayer/releases",
+        "regex": "/releases/tag/([\\d.]+)"
+    },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/HyPlayer/HyPlayer/releases/download/$version/HyPlayer_$version_x64_ARM64.msixbundle#/HyPlayer.msixbundle"
-            }
-        }
+        "url": "https://github.com/HyPlayer/HyPlayer/releases/download/$version/HyPlayer_$version_x64_ARM64.msixbundle#/dl.7z"
     }
 }
