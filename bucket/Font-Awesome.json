@@ -1,11 +1,11 @@
 {
-    "version": "6.6.0",
+    "version": "6.7.0",
     "description": "The most popular icon set",
     "homepage": "https://fontawesome.com",
     "license": "OFL-1.1",
-    "url": "https://github.com/FortAwesome/Font-Awesome/releases/download/6.6.0/fontawesome-free-6.6.0-desktop.zip",
-    "hash": "8cde9bf442f218ee330844263ee35403ff466a1afbbd11ab170523f3cd09067c",
-    "extract_dir": "fontawesome-free-6.6.0-desktop/otfs",
+    "url": "https://github.com/FortAwesome/Font-Awesome/releases/download/6.7.0/fontawesome-free-6.7.0-desktop.zip",
+    "hash": "0494ff2d3b05dff36e4e72204aa1a98fdee24a78fede6005f882e28d46037b28",
+    "extract_dir": "fontawesome-free-6.7.0-desktop/otfs",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",
@@ -27,6 +27,7 @@
             "$fontInstallDir = if ($global) { \"$env:windir\\Fonts\" } else { \"$env:LOCALAPPDATA\\Microsoft\\Windows\\Fonts\" }",
             "if (-not $global) {",
             "    # Ensure user font install directory exists and has correct permission settings",
+            "    # See https://github.com/matthewjberger/scoop-nerd-fonts/issues/198#issuecomment-1488996737",
             "    New-Item $fontInstallDir -ItemType Directory -ErrorAction SilentlyContinue | Out-Null",
             "    $accessControlList = Get-Acl $fontInstallDir",
             "    $allApplicationPackagesAccessRule = New-Object System.Security.AccessControl.FileSystemAccessRule([System.Security.Principal.SecurityIdentifier]::new(\"S-1-15-2-1\"), \"ReadAndExecute\", \"ContainerInherit,ObjectInherit\", \"None\", \"Allow\")",
@@ -40,7 +41,7 @@
             "Get-ChildItem $dir -Filter '*.otf' | ForEach-Object {",
             "    $value = if ($global) { $_.Name } else { \"$fontInstallDir\\$($_.Name)\" }",
             "    New-ItemProperty -Path $registryKey -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Value $value -Force | Out-Null",
-            "    Copy-Item $_.FullName -Destination $fontInstallDir",
+            "    Copy-Item -LiteralPath $_.FullName -Destination $fontInstallDir",
             "}"
         ]
     },
