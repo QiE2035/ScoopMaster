@@ -11,7 +11,7 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://mirrors.tuna.tsinghua.edu.cn/github-release/git-lfs/git-lfs/LatestRelease/git-lfs-windows-amd64-v3.6.0.zip",
+            "url": "https://mirror.nju.edu.cn/github-release/git-lfs/git-lfs/v3.6.0/git-lfs-windows-amd64-v3.6.0.zip",
             "hash": "62fce4cfd453493966c387db167ba1aa46ecee730ae24a5b902a1d05650fb4ce"
         }
     },
@@ -23,7 +23,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://mirrors.tuna.tsinghua.edu.cn/github-release/git-lfs/git-lfs/LatestRelease/git-lfs-windows-amd64-v$version.zip"
+                "url": "https://mirror.nju.edu.cn/github-release/git-lfs/git-lfs/v$version/git-lfs-windows-amd64-v$version.zip"
             }
         },
         "hash": {
