@@ -1,0 +1,28 @@
+{
+    "version": "0.8.2",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/stknohg/ec2rdp/releases/download/v0.8.2/ec2rdp-windows-x64.zip",
+            "bin": [
+                "ec2rdp.exe"
+            ],
+            "hash": "f2a125e7eac9f17debecb63b983d9dcabbb8184a1010f296a9c51e904a0a2a89"
+        },
+        "arm64": {
+            "url": "https://github.com/stknohg/ec2rdp/releases/download/v0.8.2/ec2rdp-windows-arm64.zip",
+            "bin": [
+                "ec2rdp.exe"
+            ],
+            "hash": "5b3a87b53fd3f2660e64a5c76fc3c367149ae0771b2c3927d83a287cdb24e443"
+        }
+    },
+    "homepage": "https://github.com/stknohg/ec2rdp",
+    "license": "MIT",
+    "description": "Remote Desktop Utility for Amazon EC2.",
+    "shortcuts": [
+        [
+            "ec2rdp.exe",
+            "ec2rdp"
+        ]
+    ]
+}
