@@ -1,0 +1,19 @@
+{
+    "version": "2.0.24262.1",
+    "description": "Celestite 是一款跨平台的第三方 DMMGamePlayer 实现，提供了基础的启动器功能和一些额外的高级特性。",
+    "homepage": "https://github.com/Kengxxiao/CelestiteLauncher",
+    "license": "MIT",
+    "url": "https://github.com/Kengxxiao/CelestiteLauncher/releases/download/2.0.24262.1/Celestite_Windows_2.0.24262.1.zip",
+    "hash": "3c76ec755956f7e3db77cfd43154b8045588022c65964af86f5b806ee96a9c7b",
+    "shortcuts": [
+        [
+            "Celestite.Desktop.exe",
+            "Celestite"
+        ]
+    ],
+    "persist": "data",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/Kengxxiao/CelestiteLauncher/releases/download/$version/Celestite_Windows_$version.zip"
+    }
+}
