@@ -1,0 +1,24 @@
+{
+    "version": "1.7.2",
+    "description": "pre-release version for quarto",
+    "homepage": "https://quarto.org/",
+    "license": "GPL-2.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/quarto-dev/quarto-cli/releases/download/v1.7.2/quarto-1.7.2-win.zip",
+            "hash": "123f59f9fc5c14556abc2f4588977d38287f0eaddcdde50a6f6ee76012f99768"
+        }
+    },
+    "bin": "bin\\quarto.exe",
+    "checkver": {
+        "url": "https://api.github.com/repositories/298579934/releases",
+        "regex": "download/v([\\d.]+)/"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/quarto-dev/quarto-cli/releases/download/v$version/quarto-$version-win.zip"
+            }
+        }
+    }
+}

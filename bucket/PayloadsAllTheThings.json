@@ -1,0 +1,17 @@
+{
+    "version": "2024-12-01T11.52.11",
+    "description": "Web Application Security 和 Pentest/CTF 的有用有效负载和旁路列表",
+    "homepage": "https://github.com/swisskyrepo/PayloadsAllTheThings",
+    "license": "unknown",
+    "url": "https://github.com/swisskyrepo/PayloadsAllTheThings/archive/refs/heads/master.zip",
+    "hash": "1f855975401eac1426ace9b32bbe97760263c567f678d300c603142ff0eec269",
+    "extract_dir": "PayloadsAllTheThings-master",
+    "checkver": {
+        "url": "https://api.github.com/repos/swisskyrepo/PayloadsAllTheThings/commits",
+        "regex": "([\\d-]+T)(\\d+):(\\d+):(\\d+)",
+        "replace": "$1$2.$3.$4"
+    },
+    "autoupdate": {
+        "url": "https://github.com/swisskyrepo/PayloadsAllTheThings/archive/refs/heads/master.zip"
+    }
+}
