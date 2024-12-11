@@ -17,19 +17,16 @@
         "32bit": {
             "url": "https://archive.mozilla.org/pub/firefox/releases/133.0/win32/en-US/Firefox%20Setup%20133.0.exe#/dl.7z",
             "hash": "sha512:3f8c075abe30a89fa3b55bbc5a6498ac0958271fa5629b47c16bb932224e088fe0d072681633fcb925a8918f830704ee92578aa8e29315d1db0ba0f9345bc720"
-        },
-        "arm64": {
-            "url": "https://archive.mozilla.org/pub/firefox/releases/133.0/win64-aarch64/en-US/Firefox%20Setup%20133.0.exe#/dl.7z",
-            "hash": "sha512:eb1221f3a65c82b29db5a7aa088a50576c1843b38061434b99d92e29fe95defee3c52fe38324eed2206bdb84d3f1774ea702ee0193ade9f8fa82c918cd44d0d5"
         }
     },
     "extract_dir": "core",
     "post_install": [
-        "firefox -CreateProfile \"Scoop $persist_dir\\profile\"",
+        "firefox -CreateProfile \"Priv $persist_dir\\profiles\\priv\"",
+        "firefox -CreateProfile \"Work $persist_dir\\profiles\\work\"",
         "$Addition = \"$persist_dir\\addition\"",
         "if (Test-Path $Addition) {",
-        "  info 'Copying additional items...'",
-        "  Copy-Item -Path $Addition\\* -Destination $dir -Force -Recurse -ErrorAction SilentlyContinue",
+        "    info 'Copying additional items...'",
+        "    Copy-Item -Path $Addition\\* -Destination $dir -Force -Recurse -ErrorAction SilentlyContinue",
         "}"
     ],
     "bin": "firefox.exe",
@@ -42,11 +39,21 @@
             "firefox.exe",
             "Firefox Profile Manager",
             "-P"
+        ],
+        [
+            "firefox.exe",
+            "Firefox Priv",
+            "-P Priv"
+        ],
+        [
+            "firefox.exe",
+            "Firefox Work",
+            "-P Work"
         ]
     ],
     "persist": [
         "distribution",
-        "profile"
+        "profiles"
     ],
     "checkver": {
         "url": "https://product-details.mozilla.org/1.0/firefox_versions.json",
@@ -66,13 +73,6 @@
                 "hash": {
                     "url": "https://archive.mozilla.org/pub/firefox/releases/$version/SHA512SUMS",
                     "regex": "$sha512\\s+win32/en-US/$basename"
-                }
-            },
-            "arm64": {
-                "url": "https://archive.mozilla.org/pub/firefox/releases/$version/win64-aarch64/en-US/Firefox%20Setup%20$version.exe#/dl.7z",
-                "hash": {
-                    "url": "https://archive.mozilla.org/pub/firefox/releases/$version/SHA512SUMS",
-                    "regex": "$sha512\\s+win64-aarch64/en-US/$basename"
                 }
             }
         }
