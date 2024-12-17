@@ -1,22 +1,28 @@
 {
-    "version": "1.1",
+    "version": "20241212T061532",
     "description": "HeapDump敏感信息提取工具",
     "homepage": "https://github.com/whwlsfb/JDumpSpider",
-    "license": "Apache2",
+    "license": "Freeware",
     "suggest": {
         "JDK": [
             "java/oraclejdk",
             "java/openjdk"
         ]
     },
-    "url": "https://github.com/whwlsfb/JDumpSpider/releases/download/dev-20240308T053242/JDumpSpider-1.1-SNAPSHOT-full.jar",
-    "hash": "",
+    "url": "https://github.com/whwlsfb/JDumpSpider/releases/download/dev-20241212T061532/JDumpSpider-1.1-SNAPSHOT-full.jar#/JDumpSpider.jar",
+    "hash": "d6f8fefce578d3b284a8804f774106e41b232679a9fef85ccf4db94ad6f972f3",
     "pre_install": [
-        "Rename-Item \"$dir\\JDumpSpider-$version-SNAPSHOT-full.jar\" 'JDumpSpider.jar'"
+        "Set-Content \"$dir\\JDumpSpider.bat\" '@pushd %~dp0",
+        "@cmd /c java.exe -jar \"JDumpSpider.jar\" %*",
+        "@popd' -Encoding Ascii"
     ],
-    "bin": "JDumpSpider.jar",
-    "checkver": "github",
+    "bin": "JDumpSpider.bat",
+    "checkver": {
+        "url": "https://api.github.com/repos/whwlsfb/JDumpSpider/releases/latest",
+        "jsonpath": "$.tag_name",
+        "regex": "dev-([\\w\\d]+)"
+    },
     "autoupdate": {
-        "url": "https://github.com/whwlsfb/JDumpSpider/releases/download/dev-20240308T053242/JDumpSpider-$version-SNAPSHOT-full.jar"
+        "url": "https://github.com/whwlsfb/JDumpSpider/releases/download/dev-$version/JDumpSpider-1.1-SNAPSHOT-full.jar#/JDumpSpider.jar"
     }
 }

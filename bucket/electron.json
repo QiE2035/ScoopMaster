@@ -1,0 +1,38 @@
+{
+    "version": "33.3.0",
+    "description": "Build cross-platform desktop apps with JavaScript, HTML, and CSS",
+    "homepage": "https://github.com/electron/electron",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/electron/electron/releases/download/v33.3.0/electron-v33.3.0-win32-x64.zip",
+            "hash": "1fb682cc8e6dc8765a4743ea39a1003c469cb0f50711f830bea93907067cf207"
+        },
+        "32bit": {
+            "url": "https://github.com/electron/electron/releases/download/v33.3.0/electron-v33.3.0-win32-ia32.zip",
+            "hash": "5e0aeeaeaeb4e7fa156a66346e142e9e53765b868efc6483915cd1879f288d1b"
+        },
+        "arm64": {
+            "url": "https://github.com/electron/electron/releases/download/v33.3.0/electron-v33.3.0-win32-arm64.zip",
+            "hash": "08adeddff74f31b51a016646a6862b404ce5778980e77bc223c2a139b0f18f33"
+        }
+    },
+    "bin": "electron.exe",
+    "checkver": {
+        "url": "https://api.github.com/repos/electron/electron/releases",
+        "regex": "/releases/tag/v([0-9]+.[0-9]+.[0-9]+)\""
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/electron/electron/releases/download/v$version/electron-v$version-win32-x64.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/electron/electron/releases/download/v$version/electron-v$version-win32-ia32.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/electron/electron/releases/download/v$version/electron-v$version-win32-arm64.zip"
+            }
+        }
+    }
+}

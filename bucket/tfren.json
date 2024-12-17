@@ -1,31 +1,33 @@
 {
-  "version": "0.1.22",
-  "architecture": {
-    "32bit": {
-      "url": "http://github.com/obay/tfren/releases/download/v0.1.22/tfren_0.1.22_Windows_i386.tar.gz",
-      "bin": [
-        "tfren.exe"
-      ],
-      "hash": "dde6664945591032613fd8e3203cacb814033daf4713ccb75e4b4cf27b9543cc"
+    "version": "0.4.8",
+    "architecture": {
+        "32bit": {
+            "url": "http://github.com/obay/tfren/releases/download/v0.4.8/tfren_Windows_i386.zip",
+            "bin": [
+                "tfren.exe"
+            ],
+            "hash": "73c0417ab6c0466edf3dea5436e609ed35f66a62c572650cb61107924d4ffe9d"
+        },
+        "64bit": {
+            "url": "http://github.com/obay/tfren/releases/download/v0.4.8/tfren_Windows_x86_64.zip",
+            "bin": [
+                "tfren.exe"
+            ],
+            "hash": "846dc40694c8f4b7946b77015514923fd7e912729ffec8f63333ae5388278518"
+        },
+        "arm64": {
+            "url": "http://github.com/obay/tfren/releases/download/v0.4.8/tfren_Windows_arm64.zip",
+            "bin": [
+                "tfren.exe"
+            ],
+            "hash": "b1e879f7ebd648ef055a099c2c20f45d92753dbd4bfc28651100c440af909b9e"
+        }
     },
-    "64bit": {
-      "url": "http://github.com/obay/tfren/releases/download/v0.1.22/tfren_0.1.22_Windows_x86_64.tar.gz",
-      "bin": [
-        "tfren.exe"
-      ],
-      "hash": "66648a9c42ea1ae24c73ba089d9d46c5c558cdaaf30c06ba53faeb1d18d5755f"
-    }
-  },
-  "homepage": "https://github.com/obay/tfren",
-  "description": "A tool to rename Terraform files accodrind to the resource type and name.",
-  "persist": [
-    "data",
-    "config.toml"
-  ],
-  "pre_install": [
-    "Write-Host 'Running preinstall command'"
-  ],
-  "post_install": [
-    "Write-Host 'Running postinstall command'"
-  ]
+    "homepage": "https://github.com/obay/tfren",
+    "license": "MIT",
+    "description": "A tool to rename Terraform files accodrind to the resource type and name.",
+    "persist": [
+        "data",
+        "config.toml"
+    ]
 }

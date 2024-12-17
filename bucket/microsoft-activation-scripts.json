@@ -1,25 +1,21 @@
 {
-  "version": "2.4",
-  "description": "A Windows and Office activator using HWID / KMS38 / Online KMS activation methods, with a focus on open-source code and fewer antivirus detections.",
-  "homepage": "https://massgrave.dev/",
-  "license": {
-    "identifier": "GPL-3.0 license",
-    "url": "https://github.com/massgravel/Microsoft-Activation-Scripts/blob/master/LICENSE"
-  },
-  "url": "https://ghproxy.com/https://github.com/massgravel/Microsoft-Activation-Scripts/archive/master.zip",
-  "hash": "13de9acd23f71aead87f00ae4d070b6118a3482de23da745f6c648b88943965c",
-  "extract_dir": "Microsoft-Activation-Scripts-master",
-  "shortcuts": [
-    [
-      "MAS\\All-In-One-Version\\MAS_AIO.cmd",
-      "MAS_AIO"
-    ]
-  ],
-  "checkver": {
-    "url": "https://github.com/massgravel/Microsoft-Activation-Scripts/releases.atom",
-    "regex": "/releases/tag/([\\d.]+)"
-  },
-  "autoupdate": {
-    "url": "https://ghproxy.com/https://github.com/massgravel/Microsoft-Activation-Scripts/archive/master.zip"
-  }
+    "homepage": "https://github.com/massgravel/Microsoft-Activation-Scripts",
+    "version": "2.8",
+    "description": "A Windows and Office activator using HWID / Ohook / KMS38 / Online KMS activation methods, with a focus on open-source code and fewer antivirus detections.",
+    "checkver": {
+        "url": "https://github.com/massgravel/Microsoft-Activation-Scripts/releases/latest",
+        "re": "releases/tag/(\\d+\\.\\d+)\""
+    },
+    "url": "https://github.com/massgravel/Microsoft-Activation-Scripts/archive/refs/tags/2.8.zip",
+    "hash": "626884161df9ad4b013e7f6ea31e254b2f57d320a042805e8e54c2895bcfebc4",
+    "autoupdate": {
+        "url": "https://github.com/massgravel/Microsoft-Activation-Scripts/archive/refs/tags/$version.zip"
+    },
+    "installer": {
+        "keep": "false",
+        "script": [
+            "%{git clone \"https://github.com/massgravel/Microsoft-Activation-Scripts\" \"$dir\\scripts\"}",
+            "Remove-Item -Recurse -Path \"$dir\" -Include \"Microsoft*\""
+        ]
+    }
 }

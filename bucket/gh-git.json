@@ -1,0 +1,33 @@
+{
+    "version": "64bf37e31ca67b2cd1b9c849d5c1ad79f3c92b14",
+    "description": "GitHub\u2019s official command line tool (git https clone)",
+    "license": "MIT license",
+    "homepage": "https://github.com/cli/cli",
+    "notes": "Type gh to start",
+    "url": "https://raw.githubusercontent.com/ingenarel/ingenarel-scoop-bucket/refs/heads/master/decoy/gh-decoy",
+    "hash": "b75b08ed033ef1174060215b77102c40e8d63360541947883589358988a4bba3",
+    "depends": [
+        "go",
+        "git"
+    ],
+    "pre_install": [
+        "echo '' 'trying to uninstall conflicts'",
+        "scoop uninstall gh gh-git-ssh",
+        "cd $dir",
+        "git clone --depth 1 --branch trunk https://github.com/cli/cli.git",
+        "echo 'building gh...' ''",
+        "cd cli",
+        "go run script\\build.go bin\\gh.exe GO_LDFLAGS='-s -w'",
+        "echo 'Removing unneeded stuff' ''",
+        "cd $dir",
+        "Move-Item cli/bin/gh.exe gh.exe",
+        "Remove-Item -Recurse -Force cli"
+    ],
+    "bin": [
+        "gh.exe"
+    ],
+    "conflicts": [
+        "gh",
+        "gh-git-ssh"
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "version": "0.1.1",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/suzuki-shunsuke/ghomfc/releases/download/v0.1.1/ghomfc_windows_amd64.zip",
+            "bin": [
+                "ghomfc.exe"
+            ],
+            "hash": "e2adde248fd1c1df749cad799d45985579f3c144cbecab5d25165198ff8dceaa"
+        },
+        "arm64": {
+            "url": "https://github.com/suzuki-shunsuke/ghomfc/releases/download/v0.1.1/ghomfc_windows_arm64.zip",
+            "bin": [
+                "ghomfc.exe"
+            ],
+            "hash": "ee0bbfc04e52a0a8eebb9dce2a75bb8b46d0baced2611c3d4f42f111d19bbd02"
+        }
+    },
+    "license": "MIT",
+    "description": "Add GitHub Issues and Pull Requests to GitHub Projects\n"
+}

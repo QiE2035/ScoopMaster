@@ -1,0 +1,24 @@
+{
+    "version": "38f503a1ea7de0cff8c7bff6e36a9d2d138762bb",
+    "description": "nmuidi is a program that aims to delete files, hopefully quickly",
+    "homepage": "https://github.com/Dillonb/nmuidi",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://nightly.link/Dillonb/nmuidi/workflows/build/main/nmuidi-windows.zip",
+            "hash": "f4150d00afd90ddf6ea7c91985b575e590eaac3fa09f11bb9b00cfec67f7ab9e"
+        }
+    },
+    "bin": "nmuidi.exe",
+    "checkver": {
+        "url": "https://api.github.com/repos/Dillonb/nmuidi/commits/HEAD",
+        "jsonpath": "$.sha"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://nightly.link/Dillonb/nmuidi/workflows/build/main/nmuidi-windows.zip"
+            }
+        }
+    }
+}

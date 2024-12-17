@@ -1,21 +1,20 @@
 {
-  "version": "5.6.0",
-  "description": "Milkman - An Extensible Request/Response Workbench",
-  "homepage": "https://github.com/warmuuh/milkman",
-  "license": "MIT",
-  "url": "https://ghproxy.com/https://github.com/warmuuh/milkman/releases/download/5.6.0/milkman-dist-win64-bin.zip",
-  "hash": "9a7f8f70df8ebd7f2a8912c206ce3e2d9d39b135efae1da2042c6d0428e388dc",
-  "extract_dir": "milkman-5.6.0",
-  "bin": "milkman.exe",
-  "shortcuts": [
-    [
-      "milkman.exe",
-      "Milkman"
-    ]
-  ],
-  "checkver": "github",
-  "autoupdate": {
-    "url": "https://ghproxy.com/https://github.com/warmuuh/milkman/releases/download/$version/milkman-dist-win64-bin.zip",
-    "extract_dir": "milkman-$version"
-  }
+    "version": "5.9.0",
+    "description": "An Extensible Request/Response Workbench",
+    "homepage": "https://github.com/warmuuh/milkman",
+    "license": "MIT License",
+    "url": "https://github.com/warmuuh/milkman/releases/download/5.9.0/milkman-dist-win64-bin.zip",
+    "hash": "37d8430c2890299259c209f804cb84d704e6ea468712555c40cb5a194cc1a77f",
+    "extract_dir": "milkman-5.9.0",
+    "shortcuts": [
+        [
+            "milkman.exe",
+            "Milkman"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/warmuuh/milkman/releases/download/$version/milkman-dist-win64-bin.zip",
+        "extract_dir": "milkman-$version"
+    }
 }
