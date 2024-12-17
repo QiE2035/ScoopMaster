@@ -1,39 +1,37 @@
 {
-    "version": "4.21",
-    "description": "Altirra is an 8-bit Atari emulator focusing on high-quality emulation, sometimes over speed and polish",
-    "homepage": "https://www.virtualdub.org/altirra.html",
-    "license": "GPL-2.0-only",
-    "architecture": {
-        "64bit": {
-            "url": "https://www.virtualdub.org/downloads/Altirra-4.21.zip",
-            "hash": "c5965184cf5b43d6bd30af32ec64373363f4597b028de5c8fb30238865bf6427",
-            "bin": "Altirra64.exe",
-            "shortcuts": [
-                [
-                    "Altirra64.exe",
-                    "Altirra"
-                ]
-            ],
-            "post_install": "Remove-Item $dir\\Altirra.exe"
-        },
-        "arm64": {
-            "url": "https://www.virtualdub.org/downloads/Altirra-4.21-ARM64.zip",
-            "hash": "5022716921C67D6CF1354D93FDA719AA26986909BFFF6AA916AF277457E28F08",
-            "bin": "AltirraARM64.exe",
-            "shortcuts": [
-                [
-                    "AltirraARM64.exe",
-                    "Altirra"
-                ]
-            ]
-        }
+  "version": "4.10",
+  "description": "Altirra is the 8-bit Atari emulator focusing on high-quality emulation, sometimes over speed and polish",
+  "homepage": "http://www.virtualdub.org/altirra.html",
+  "license": "GPL-2.0-only",
+  "architecture": {
+    "64bit": {
+      "url": "http://www.virtualdub.org/downloads/Altirra-4.10.zip",
+      "hash": "98e59243dca8cf571d3cde4caeb7ba13e7fec9c0cb480e45b1fd45af25c1165e",
+      "bin": "Altirra64.exe",
+      "shortcuts": [
+        [
+          "Altirra64.exe",
+          "Altirra"
+        ]
+      ]
     },
-    "pre_install": "$manifest.persist | ForEach-Object { if (!(Test-Path $persist_dir\\$_)) { New-Item $dir\\$_ | Out-Null } }",
-    "persist": "Altirra.ini",
-    "checkver": {
-        "regex": "Altirra ([\\d.]+)"
-    },
-    "autoupdate": {
-        "url": "https://www.virtualdub.org/downloads/Altirra-$version.zip"
+    "32bit": {
+      "url": "http://www.virtualdub.org/downloads/Altirra-4.10.zip",
+      "hash": "98e59243dca8cf571d3cde4caeb7ba13e7fec9c0cb480e45b1fd45af25c1165e",
+      "bin": "Altirra.exe",
+      "shortcuts": [
+        [
+          "Altirra.exe",
+          "Altirra"
+        ]
+      ]
     }
+  },
+  "checkver": {
+    "url": "http://www.virtualdub.org/altirra.html",
+    "regex": "Version ([\\d.]+): \\["
+  },
+  "autoupdate": {
+    "url": "http://www.virtualdub.org/downloads/Altirra-$version.zip"
+  }
 }

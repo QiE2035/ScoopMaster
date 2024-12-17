@@ -1,32 +1,28 @@
 {
-    "version": "2024.12.1",
-    "description": "A GUI inspector for mobile apps and more, powered by a (separately installed) Appium server.",
-    "homepage": "http://appium.io/",
-    "license": "Apache-2.0",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/appium/appium-inspector/releases/download/v2024.12.1/Appium-Inspector-2024.12.1-win-x64.zip",
-            "hash": "sha512:63891b385d37dc65421887b582e5e4ff69b08b7a88792cfe09db6fa1a0e7458615fabda556f00a8f66d687653ee4b40647f23a764efe4db85c2d067b6e03bbf5"
-        }
-    },
-    "shortcuts": [
-        [
-            "Appium Inspector.exe",
-            "Appium Inspector"
-        ]
-    ],
-    "checkver": {
-        "github": "https://github.com/appium/appium-inspector"
-    },
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/appium/appium-inspector/releases/download/v$version/Appium-Inspector-$version-win-x64.zip",
-                "hash": {
-                    "url": "$baseurl/latest.yml",
-                    "regex": "sha512: $base64"
-                }
-            }
-        }
+  "version": "2023.7.1",
+  "description": "A GUI inspector for mobile apps and more, powered by a (separately installed) Appium server.",
+  "homepage": "http://appium.io/",
+  "license": "Apache-2.0",
+  "architecture": {
+    "64bit": {
+      "url": "https://ghproxy.com/https://github.com/appium/appium-inspector/releases/download/v2023.7.1/Appium-Inspector-windows-2023.7.1.zip",
+      "hash": "a150b6c23d2e4eb336025174aa7aa1767da5b51931b466cf81e2c2db9ec304f1"
     }
+  },
+  "shortcuts": [
+    [
+      "Appium Inspector.exe",
+      "Appium Inspector"
+    ]
+  ],
+  "checkver": {
+    "github": "https://github.com/appium/appium-inspector"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://ghproxy.com/https://github.com/appium/appium-inspector/releases/download/v$version/Appium-Inspector-windows-$version.zip"
+      }
+    }
+  }
 }

@@ -1,19 +1,12 @@
 {
-    "version": "0.17.4",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/adrianliechti/loop/releases/download/v0.17.4/loop_0.17.4_windows_amd64.tar.gz",
-            "bin": [
-                "loop.exe"
-            ],
-            "hash": "ee1c020244ad33bbf8b454b93b1fd24ef649b291867e5edbc1a266603a056734"
-        },
-        "arm64": {
-            "url": "https://github.com/adrianliechti/loop/releases/download/v0.17.4/loop_0.17.4_windows_arm64.tar.gz",
-            "bin": [
-                "loop.exe"
-            ],
-            "hash": "bac428007c5db765f815b3931f5fe0303411b9ec6f86fae07b504ba4327258a0"
-        }
+  "version": "0.14.8",
+  "architecture": {
+    "64bit": {
+      "url": "https://ghproxy.com/https://github.com/adrianliechti/loop/releases/download/v0.14.8/loop_0.14.8_windows_amd64.tar.gz",
+      "bin": [
+        "loop.exe"
+      ],
+      "hash": "e22e28aab53f452f12ae90dd2d542341875cfc9e5ba818d1a18d8fe214768cba"
     }
+  }
 }

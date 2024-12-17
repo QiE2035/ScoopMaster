@@ -1,33 +1,27 @@
 {
-    "version": "2023.9.256",
-    "description": "Raidrive.Conveniently manage all your cloud services as a network drive using the standard file explorer.",
-    "homepage": "https://www.raidrive.com/",
-    "license": {
-        "identifier": "Freeware",
-        "url": "https://www.raidrive.com/about/terms"
-    },
+    "version": "2020.11.30",
+    "description": "RaiDrive 远程挂载工具",
+    "homepage": "https://github.com/gendloop/RaiDrive",
+    "license": "LGPL-2.1-or-later",
+    "notes": "<Installer>",
     "architecture": {
         "64bit": {
-            "url": "https://app.raidrive.com/download/raidrive/release/RaiDrive_2023.9.256_x64.msi",
-            "hash": "c4c4ecae27ccefee187766833a57d3aab3ee2af44bbd41c27ab0a32d3828dc17"
+            "url": "https://github.com/gendloop/RaiDrive/releases/download/v2020.11.30/RaiDrive-2020.11.30-win64.7z",
+            "hash": "4c9eb5929063fdb97eb557cc858c9fe6258c0e38c92c1c9d9b633c95bfdbf0fe"
         }
     },
-    "##": "https://www.advancedinstaller.com/user-guide/exe-setup-file.html",
-    "bin": "raidrive.exe",
-    "shortcuts": [
-        [
-            "raidrive.exe",
-            "RaiDrive"
+    "installer": {
+        "script": [
+            "Push-Location \"$dir\"",
+            "Start-Process RaiDrive-$version-win64.exe",
+            "Pop-Location"
         ]
-    ],
-    "checkver": {
-        "url": "https://www.raidrive.com/update",
-        "regex": "RaiDrive</span> <span class=\"fw-bold\">([\\d.]+)"
     },
+    "checkver": "github",
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://app.raidrive.com/download/raidrive/release/RaiDrive_$version_x64.msi"
+                "url": "https://github.com/gendloop/RaiDrive/releases/download/v$version/RaiDrive-$version-win64.7z"
             }
         }
     }

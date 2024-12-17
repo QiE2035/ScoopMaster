@@ -1,19 +1,12 @@
 {
-    "version": "0.2.11",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/adrianliechti/devkit/releases/download/v0.2.11/devkit_0.2.11_windows_amd64.tar.gz",
-            "bin": [
-                "devkit.exe"
-            ],
-            "hash": "d95d0a1b096d8d2035d45bab82a9e66fedad503498ddd17b40d6a394bbb9f5de"
-        },
-        "arm64": {
-            "url": "https://github.com/adrianliechti/devkit/releases/download/v0.2.11/devkit_0.2.11_windows_arm64.tar.gz",
-            "bin": [
-                "devkit.exe"
-            ],
-            "hash": "38dba4aee923c666adc8b1558eb3d2b93e679ab9388f803da9312f105adcd307"
-        }
+  "version": "0.1.3",
+  "architecture": {
+    "64bit": {
+      "url": "https://ghproxy.com/https://github.com/adrianliechti/devkit/releases/download/v0.1.3/devkit_0.1.3_windows_amd64.tar.gz",
+      "bin": [
+        "devkit.exe"
+      ],
+      "hash": "c76d038defa440adde911ea269fe46cd095d5bdfc80ed1fbd7f009776e8de06f"
     }
+  }
 }

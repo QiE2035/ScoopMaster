@@ -1,14 +1,14 @@
 {
-    "version": "6.1",
+    "version": "6.2.2",
     "description": "Scoop Super Search, instantaneous results, UTF-8 and regex compatible. The fastest search engine for Scoop.",
-    "homepage": "https://github.com/okibcn/ss",
+    "homepage": "https://github.com/QiE2035/ss",
     "license": "GPL-3.0-only",
     "notes": [
         "Type ss -h before using it for the first time to learn how it works.",
         "Visit https://github.com/okibcn/ss for more information."
     ],
-    "url": "https://github.com/okibcn/ss/releases/download/6.1/ss-v6.1.7z",
-    "hash": "989cf9c2486daf4a95493a635c0c28328e4d1906fcf3c2730392acc723b4a4fc",
+    "url": "https://github.com/QiE2035/ss/releases/download/6.2.2/ss-v6.2.2.7z",
+    "hash": "6dce2bb5cde009a409e3aa704f09440a66f95e2d5adb99696b9e319280b0e38f",
     "depends": [
         "7zip",
         "aria2"
@@ -19,10 +19,10 @@
         "Remove-Item \"$dir/ss\" -Recurse -Force"
     ],
     "checkver": {
-        "github": "https://api.github.com/repos/okibcn/ss",
+        "github": "https://api.github.com/repos/QiE2035/ss",
         "regex": "v([\\d\\.\\-]+)\\.7z"
     },
     "autoupdate": {
-        "url": "https://github.com/okibcn/ss/releases/download/$version/ss-v$version.7z"
+        "url": "https://github.com/QiE2035/ss/releases/download/$version/ss-v$version.7z"
     }
 }

@@ -1,29 +1,22 @@
 {
-    "version": "3.2.8",
-    "architecture": {
-        "32bit": {
-            "url": "https://github.com/meyermarcel/icm/releases/download/3.2.8/icm_Windows_i386.zip",
-            "bin": [
-                "icm.exe"
-            ],
-            "hash": "08c9c19f1401cb144277192d789762595a5216707244a135ab6a5038fd934822"
-        },
-        "64bit": {
-            "url": "https://github.com/meyermarcel/icm/releases/download/3.2.8/icm_Windows_x86_64.zip",
-            "bin": [
-                "icm.exe"
-            ],
-            "hash": "63078f0cb2c310f113bc11e3f4fb6a87832c9427729fea6d0ced1220d7cce4d3"
-        },
-        "arm64": {
-            "url": "https://github.com/meyermarcel/icm/releases/download/3.2.8/icm_Windows_arm64.zip",
-            "bin": [
-                "icm.exe"
-            ],
-            "hash": "133df267361795ee8be2c928a5cf41943c1e81c944e801ba3aa377e4bf1c52b7"
-        }
+  "version": "3.0.3",
+  "architecture": {
+    "32bit": {
+      "url": "https://ghproxy.com/https://github.com/meyermarcel/icm/releases/download/3.0.3/icm_Windows_i386.zip",
+      "bin": [
+        "icm.exe"
+      ],
+      "hash": "0f4c9a3157010d348c627bb14674bbc2a4ff59efc01e1e80cc60f3b90118b6e8"
     },
-    "homepage": "https://github.com/meyermarcel/icm",
-    "license": "MIT",
-    "description": "Generate or validate intermodal container markings."
+    "64bit": {
+      "url": "https://ghproxy.com/https://github.com/meyermarcel/icm/releases/download/3.0.3/icm_Windows_x86_64.zip",
+      "bin": [
+        "icm.exe"
+      ],
+      "hash": "fcefb70d92b653f923f1be72c0bee4c5cd9df55ca879911c127a466d430f3fb8"
+    }
+  },
+  "homepage": "https://github.com/meyermarcel/icm",
+  "license": "MIT",
+  "description": "Generate or validate intermodal container markings."
 }
