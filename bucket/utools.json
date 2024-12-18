@@ -1,7 +1,7 @@
 {
     "homepage": "https://u.tools/",
     "description": "Your productive tools set and launcher.",
-    "license": "Proprietary",
+    "license": "Freeware",
     "version": "6.0.0",
     "architecture": {
         "64bit": {
@@ -9,13 +9,6 @@
             "hash": "846179ab8332689217e4740ee30b7e92cf44837737a7a28405005279881de52a",
             "installer": {
                 "script": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR/app-64.7z\" \"$dir\""
-            }
-        },
-        "32bit": {
-            "url": "https://open.u-tools.cn/download/uTools-6.0.0-ia32.exe#/dl.7z",
-            "hash": "d5f9306df7725833f1abc3c2646efd48b5870bb67207a26123d1e72d7b5772f1",
-            "installer": {
-                "script": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR/app-32.7z\" \"$dir\""
             }
         }
     },
@@ -27,17 +20,10 @@
         ]
     ],
     "checkver": {
-        "url": "https://www.u.tools/docs/guide/changelog.html",
-        "regex": "uTools\\s([\\d.]+)"
+        "url": "https://u.tools/download",
+        "regex": "uTools-([\\d.]+).exe"
     },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://open.u-tools.cn/download/uTools-$version.exe#/dl.7z"
-            },
-            "32bit": {
-                "url": "https://open.u-tools.cn/download/uTools-$version-ia32.exe#/dl.7z"
-            }
-        }
+        "url": "https://open.u-tools.cn/download/uTools-$version.exe#/dl.7z"
     }
 }
