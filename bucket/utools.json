@@ -1,34 +1,44 @@
 {
-    "homepage": "https://u.tools/",
+    "version": "6.0.1",
     "description": "Your productive tools set and launcher.",
-    "license": "Proprietary",
-    "version": "6.0.0",
+    "homepage": "https://u.tools/",
+    "license": {
+        "identifier": "Proprietary",
+        "url": "http://u.tools/agreement.html"
+    },
     "architecture": {
         "64bit": {
-            "url": "https://open.u-tools.cn/download/uTools-6.0.0.exe#/dl.7z",
-            "hash": "846179ab8332689217e4740ee30b7e92cf44837737a7a28405005279881de52a",
+            "url": "https://open.u-tools.cn/download/uTools-6.0.1.exe#/dl.7z",
+            "hash": "5ebb97ad82af639d5a1c8590d55e5e7cdfb92389de63c6ef0a08fa9ec3fc3a09",
             "installer": {
                 "script": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR/app-64.7z\" \"$dir\""
             }
         },
         "32bit": {
-            "url": "https://open.u-tools.cn/download/uTools-6.0.0-ia32.exe#/dl.7z",
-            "hash": "d5f9306df7725833f1abc3c2646efd48b5870bb67207a26123d1e72d7b5772f1",
+            "url": "https://open.u-tools.cn/download/uTools-6.0.1-ia32.exe#/dl.7z",
+            "hash": "58fdf4aa2f09ef85498ab1e8c50b2a6d0ef492457736e9f1aa84c549b68da18a",
             "installer": {
                 "script": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR/app-32.7z\" \"$dir\""
             }
         }
     },
-    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\" -Force -Recurse",
+    "post_install": [
+        "@('$PLUGINSDIR') | ForEach-Object { Remove-Item \"$dir\\$_\" -Recurse -Force -ErrorAction SilentlyContinue }",
+        "if (!(Test-Path \"$dir\\User Data\\*\") -and (Test-Path \"$env:AppData\\uTools\")) {",
+        "    info '[Portable Mode]: Copying user data...'",
+        "    Copy-Item \"$env:AppData\\uTools\\*\" \"$dir\\User Data\" -Recurse",
+        "}"
+    ],
     "shortcuts": [
         [
             "uTools.exe",
             "uTools"
         ]
     ],
+    "persist": "User Data",
     "checkver": {
         "url": "https://u.tools/download/",
-        "regex": "download/uTools-([\\d.]+).exe"
+        "regex": "uTools-([\\d.]+).exe"
     },
     "autoupdate": {
         "architecture": {
