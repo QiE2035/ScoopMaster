@@ -12,7 +12,7 @@
     ],
     "depends": ["extras/retroarch", "filip2cz_scoop-retro/retroarch-mu_libretro", "filip2cz_scoop-retro/palmos41-en-m515_rom"],
     "pre_install": [
-        "Set-Content -Path '~\\scoop\\apps\\BangBang\\1.0\\run.bat' -Value '%userprofile%\\scoop\\apps\\retroarch\\current\\retroarch.exe -L %userprofile%\\scoop\\apps\\retroarch\\current\\cores\\mu_libretro.dll %userprofile%\\scoop\\apps\\BangBang\\current\\BangBang.prc'"
+        "Set-Content -Path \"$original_dir\\run.bat\" -Value \"$scoopdir\\apps\\retroarch\\current\\retroarch.exe -L $scoopdir\\apps\\retroarch\\current\\cores\\mu_libretro.dll $dir\\BangBang.prc\""
     ],
     "shortcuts": [
         [
