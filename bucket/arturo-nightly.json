@@ -1,21 +1,21 @@
 {
-    "version": "2024-12-28",
-    "description": "Simple, expressive & portable programming language for efficient scripting",
-    "homepage": "https://arturo-lang.io/",
-    "license": "MIT",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/arturo-lang/nightly/releases/download/2024-12-28/arturo-nightly.2024-12-27-amd64-windows-full.zip",
-            "hash": "7c789735365b8fe14b7818cd35b64b4c005abd5f6faad940ca8bbe5614ae0abe"
-        }
-    },
-    "bin": "arturo.exe",
-    "checkver": {
-        "url": "https://api.github.com/repositories/331569615/releases/latest",
-        "jsonpath": "$.assets[*].browser_download_url",
-        "regex": "download/(?<version>\\d{4}-\\d{2}-\\d{2})/arturo-nightly.(?<date>\\d{4}-\\d{2}-\\d{2})"
-    },
-    "autoupdate": {
-        "url": "https://github.com/arturo-lang/nightly/releases/download/$matchVersion/arturo-nightly.$matchDate-amd64-windows-full.zip"
+  "version": "2024-12-28",
+  "description": "Simple, expressive & portable programming language for efficient scripting",
+  "homepage": "https://arturo-lang.io/",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://ghgo.xyz/https://github.com/arturo-lang/nightly/releases/download/2024-12-28/arturo-nightly.2024-12-27-amd64-windows-full.zip",
+      "hash": "7c789735365b8fe14b7818cd35b64b4c005abd5f6faad940ca8bbe5614ae0abe"
     }
+  },
+  "bin": "arturo.exe",
+  "checkver": {
+    "url": "https://api.github.com/repositories/331569615/releases/latest",
+    "jsonpath": "$.assets[*].browser_download_url",
+    "regex": "download/(?<version>\\d{4}-\\d{2}-\\d{2})/arturo-nightly.(?<date>\\d{4}-\\d{2}-\\d{2})"
+  },
+  "autoupdate": {
+    "url": "https://ghgo.xyz/https://github.com/arturo-lang/nightly/releases/download/$matchVersion/arturo-nightly.$matchDate-amd64-windows-full.zip"
+  }
 }
