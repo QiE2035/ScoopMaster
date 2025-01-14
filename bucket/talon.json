@@ -12,8 +12,5 @@
       "talon.exe",
       "Talon Voice"
     ]
-  ],
-  "persist": [
-    "%APPDATA%\\Talon"
   ]
 }
