@@ -1,9 +1,9 @@
 {
     "version": "9.0.1",
-    "description": "Microsoft .NET Desktop Runtime latest",
+    "description": "Microsoft .NET (9.0 latest) Desktop Runtime",
     "homepage": "https://dotnet.microsoft.com/download/dotnet",
     "license": "MIT",
-    "notes": "You can now remove this installer with 'scoop uninstall windowsdesktop-runtime'",
+    "notes": "You can now remove this installer with 'scoop uninstall -p windowsdesktop-runtime'",
     "architecture": {
         "64bit": {
             "url": "https://dotnetcli.blob.core.windows.net/dotnet/WindowsDesktop/9.0.1/windowsdesktop-runtime-9.0.1-win-x64.exe",
