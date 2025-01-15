@@ -4,8 +4,8 @@
     "homepage": "https://github.com/HALOMAXX/BLREdit",
     "license": "MIT",
     "url": [
-        "https://ghproxy.com/https://github.com/HALOMAXX/BLREdit/releases/download/v0.12.101/BLREdit.zip",
-        "https://ghproxy.com/https://github.com/HALOMAXX/BLREdit/releases/download/v0.12.101/Assets.zip"
+        "https://github.com/HALOMAXX/BLREdit/releases/download/v0.12.101/BLREdit.zip",
+        "https://github.com/HALOMAXX/BLREdit/releases/download/v0.12.101/Assets.zip"
     ],
     "hash": [
         "da2bf1fee1b9ef26785942ac87aa00fd73409cf27550f5ebd2d029dd68433f01",
@@ -47,8 +47,8 @@
     "checkver": "github",
     "autoupdate": {
         "url": [
-            "https://ghproxy.com/https://github.com/HALOMAXX/BLREdit/releases/download/v$version/BLREdit.zip",
-            "https://ghproxy.com/https://github.com/HALOMAXX/BLREdit/releases/download/v$version/Assets.zip"
+            "https://github.com/HALOMAXX/BLREdit/releases/download/v$version/BLREdit.zip",
+            "https://github.com/HALOMAXX/BLREdit/releases/download/v$version/Assets.zip"
         ]
     }
 }
