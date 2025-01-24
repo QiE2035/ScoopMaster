@@ -29,8 +29,10 @@
         "script": [
             "Invoke-ExternalCommand ((Get-Command 'isx' -CommandType Application).Source) -ArgumentList \"$dir\\dl.exe\" -LogPath \"$dir\\isx.log\" | Out-Null",
             "$folder = Get-ChildItem \"$dir\" -Directory | Select-Object -First 1 -ExpandProperty FullName",
-            "Expand-MsiArchive \"$folder\\Xshell 8.msi\" \"$dir\" -ExtractDir \"SourceDir\\program files\\NetSarang\\Xshell 8\" -Removal",
+            "Expand-MsiArchive \"$folder\\Xshell 8.msi\" \"$dir\"",
             "Remove-Item $folder -Force -Recurse",
+            "# Move-Item \"$dir\\SourceDir\\NetSarang\\*\" \"$dir\" -Force",
+            "Move-Item \"$dir\\SourceDir\\program files\\NetSarang\\Xshell 8\\*\" \"$dir\" -Force",
             "Remove-Item \"$dir\\LiveUpdate.dat\" -Force",
             "Remove-Item \"$dir\\LiveUpdate.exe\" -Force",
             "Remove-Item \"$dir\\nsregister.exe\" -Force",
